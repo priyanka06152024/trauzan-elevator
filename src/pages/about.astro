@@ -1,0 +1,2176 @@
+
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+
+const gstPages = [
+  '/images/gst1.webp',
+  '/images/gst2.webp',
+  '/images/gst3.webp',
+];
+
+const businessPages = [
+  '/images/rc1.webp',
+  '/images/rc2.webp',
+  '/images/rc3.webp',
+];
+
+const udyamPages = [
+  '/images/udyam-page-1.webp',
+];
+
+const documents = [
+  {
+    id: 'gst',
+    number: '01',
+    title: 'GST Registration',
+    subtitle: 'Goods & Services Tax',
+    description: 'Official GST registration and business tax identification records.',
+    reference: '09MIVPS2850P1ZS',
+    type: 'TAX REGISTRATION',
+    pages: gstPages,
+    image: gstPages[0],
+    format: 'IMAGE DOCUMENT',
+  },
+  {
+    id: 'business',
+    number: '02',
+    title: 'Business Certificate',
+    subtitle: 'Business Registration',
+    description: 'Business registration records and supporting documentation.',
+    reference: 'OFFICIAL DOCUMENT',
+    type: 'BUSINESS RECORD',
+    pages: businessPages,
+    image: businessPages[0],
+    format: 'IMAGE DOCUMENT',
+  },
+  {
+    id: 'udyam',
+    number: '03',
+    title: 'Udyam Registration',
+    subtitle: 'MSME Registration',
+    description: 'Official MSME registration certificate in PDF format.',
+    reference: 'UDYAM-DL-05-0095911',
+    type: 'MSME REGISTRATION',
+    pages: udyamPages,
+    image: udyamPages[0],
+    format: 'PDF DOCUMENT',
+    pdf: '/documents/trauzan-elevator-udyam-registration.pdf',
+  },
+];
+---
+
+<BaseLayout
+  title="About Trauzan Elevator | Our Story & Business Credentials"
+  description="Discover Trauzan Elevator, our leadership, mission, vision, GST registration and official business certificates."
+>
+  <PageHero
+    eyebrow="THE PEOPLE BEHIND THE PROMISE"
+    title="Built on trust."
+    accent="Driven by care."
+    description="A dependable partner for complete lift, elevator and escalator solutions."
+    image="/images/elevater14.png"
+  />
+
+  <!-- ABOUT INTRO -->
+
+  <section class="about-section">
+    <div class="container">
+
+      <div class="section-meta" data-reveal>
+        <span>01 / ABOUT TRAUZAN</span>
+        <span>OUR STORY · OUR COMMITMENT</span>
+      </div>
+
+      <div class="about-grid">
+
+        <div class="about-heading" data-reveal>
+          <span class="section-symbol">✳</span>
+
+          <h2>
+            Moving<br />
+            people.<br />
+            <em>Building trust.</em>
+          </h2>
+
+          <span class="heading-index">TRAUZAN ELEVATOR — INDIA</span>
+        </div>
+
+        <div class="about-copy" data-reveal>
+          <span class="gold-line"></span>
+
+          <span class="eyebrow">WHO WE ARE</span>
+
+          <h3>
+            Elevating everyday experiences through dependable solutions.
+          </h3>
+
+          <p>
+            Welcome to Trauzan Elevator, your trusted partner
+            for complete elevator, lift and escalator solutions.
+          </p>
+
+          <p>
+            We are committed to providing reliable, efficient and
+            professional elevator services. We understand the
+            importance of safety, quality and smooth performance
+            in vertical transportation.
+          </p>
+
+          <p>
+            Our services include elevator installation, maintenance,
+            repair, modernization and escalator solutions. With a
+            focus on quality workmanship and customer care, we
+            strive to make every journey safe and comfortable.
+          </p>
+
+          <a href="/contact" class="text-link">
+            LET'S WORK TOGETHER <span>↗</span>
+          </a>
+        </div>
+
+      </div>
+
+      <div class="about-bottom-line">
+        <span>TRAUZAN ELEVATOR</span>
+        <span>ENGINEERED FOR EVERY LEVEL ↓</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BRAND STATEMENT -->
+
+  <section class="brand-statement">
+    <div class="container">
+
+      <div class="statement-top" data-reveal>
+        <span>02 / OUR PHILOSOPHY</span>
+        <span>BUILT AROUND WHAT MATTERS</span>
+      </div>
+
+      <div class="statement-content" data-reveal>
+        <span class="statement-mark">“</span>
+
+        <h2>
+          Every level deserves
+          <em>reliable movement.</em>
+        </h2>
+
+        <p>
+          Safety, quality and customer confidence guide
+          the way we approach every project.
+        </p>
+      </div>
+
+      <div class="statement-bottom">
+        <span>QUALITY FIRST</span>
+        <span>SAFETY ALWAYS</span>
+        <span>TRUST IN EVERY JOURNEY</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MISSION AND VISION -->
+
+  <section class="mission-section">
+    <div class="container">
+
+      <div class="section-meta" data-reveal>
+        <span>03 / OUR DIRECTION</span>
+        <span>WHAT DRIVES US FORWARD</span>
+      </div>
+
+      <div class="mission-grid">
+
+        <article class="mission-card" data-reveal>
+          <div class="mission-card-top">
+            <span>OUR MISSION</span>
+            <span>01 / 02</span>
+          </div>
+
+          <span class="mission-symbol">✳</span>
+
+          <div>
+            <h3>
+              Quality in<br />
+              every <em>connection.</em>
+            </h3>
+
+            <p>
+              To provide quality elevator and escalator
+              solutions with a strong focus on safety,
+              reliability and customer satisfaction.
+            </p>
+          </div>
+
+          <span class="mission-watermark">M</span>
+        </article>
+
+        <article class="mission-card vision-card" data-reveal>
+          <div class="mission-card-top">
+            <span>OUR VISION</span>
+            <span>02 / 02</span>
+          </div>
+
+          <span class="mission-symbol">↗</span>
+
+          <div>
+            <h3>
+              A name built<br />
+              on <em>confidence.</em>
+            </h3>
+
+            <p>
+              To become a trusted name in the elevator
+              industry through excellent service and
+              lasting customer relationships.
+            </p>
+          </div>
+
+          <span class="mission-watermark">V</span>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- LEADERSHIP -->
+
+  <section class="leadership-section">
+    <div class="container">
+
+      <div class="leadership-heading" data-reveal>
+        <div>
+          <span class="eyebrow">04 / LEADERSHIP</span>
+
+          <h2>
+            People behind<br />
+            <em>the promise.</em>
+          </h2>
+        </div>
+
+        <p>
+          Strong relationships begin with people.
+          Our owners are committed to dependable service,
+          professional support and lasting customer relationships.
+        </p>
+      </div>
+
+      <div class="owners-grid">
+
+        <article class="owner-card" data-reveal>
+          <div class="owner-top">
+            <span>OWNER / 01</span>
+            <span>✳</span>
+          </div>
+
+          <div class="owner-middle">
+            <div class="owner-initial">B</div>
+
+            <div>
+              <span class="eyebrow">TRAUZAN ELEVATOR</span>
+              <h3>Bhamar Singh</h3>
+              <p>Owner</p>
+            </div>
+          </div>
+
+          <div class="owner-bottom">
+            <span>LEADERSHIP & COMMITMENT</span>
+            <span>01 — 02</span>
+          </div>
+        </article>
+
+        <article class="owner-card owner-light" data-reveal>
+          <div class="owner-top">
+            <span>OWNER / 02</span>
+            <span>✳</span>
+          </div>
+
+          <div class="owner-middle">
+            <div class="owner-initial">R</div>
+
+            <div>
+              <span class="eyebrow">TRAUZAN ELEVATOR</span>
+              <h3>Roop Singh</h3>
+              <p>Owner</p>
+            </div>
+          </div>
+
+          <div class="owner-bottom">
+            <span>LEADERSHIP & COMMITMENT</span>
+            <span>02 — 02</span>
+          </div>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BUSINESS CREDENTIALS -->
+
+  <section class="credentials-section">
+    <div class="container">
+
+      <div class="credentials-heading" data-reveal>
+        <div>
+          <span class="eyebrow">05 / BUSINESS CREDENTIALS</span>
+
+          <h2>
+            Built on trust.<br />
+            <em>Backed by records.</em>
+          </h2>
+        </div>
+
+        <p>
+          Transparency and professional responsibility
+          are important to us. Explore our business
+          registration details and official records.
+        </p>
+      </div>
+
+      <div class="credentials-strip" data-reveal>
+
+        <div class="credential-item">
+          <span>GST REGISTRATION NUMBER</span>
+          <strong>09MIVPS2850P1ZS</strong>
+          <small>GOODS & SERVICES TAX</small>
+        </div>
+
+        <div class="credential-divider"></div>
+
+        <div class="credential-item">
+          <span>UDYAM REGISTRATION NUMBER</span>
+          <strong>UDYAM-DL-05-0095911</strong>
+          <small>MSME REGISTRATION</small>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- OFFICIAL DOCUMENTS -->
+
+  <section class="documents-section">
+    <div class="container">
+
+      <div class="documents-heading" data-reveal>
+        <div>
+          <span class="eyebrow">06 / OFFICIAL DOCUMENTS</span>
+
+          <h2>
+            Our business.<br />
+            <em>On record.</em>
+          </h2>
+        </div>
+
+        <div class="documents-heading-right">
+          <p>
+            Official business documentation,
+            presented for reference and transparency.
+          </p>
+
+          <span>SELECT A DOCUMENT TO EXPLORE ↘</span>
+        </div>
+      </div>
+
+      <div class="documents-grid">
+
+        {documents.map((doc, index) => (
+          <article
+            class={`document-card ${index === 0 ? 'document-featured' : ''}`}
+            data-reveal
+            style={`--card-index:${index}`}
+          >
+
+            <div class="document-top">
+              <span>{doc.number} / {doc.type}</span>
+
+              <span class="document-format">
+                {doc.format}
+              </span>
+            </div>
+
+            <button
+              class="document-preview"
+              type="button"
+              data-open-document={doc.id}
+              aria-label={`Open ${doc.title}`}
+            >
+              <img
+                src={doc.image}
+                alt={`${doc.title} preview`}
+                loading="lazy"
+              />
+
+              <span class="document-overlay">
+                <span>
+                  {doc.pdf ? 'OPEN DOCUMENT ↗' : 'VIEW DOCUMENT ↗'}
+                </span>
+              </span>
+
+              <span class="document-page-count">
+                {doc.pdf ? 'PDF' : `${doc.pages.length} PAGES`}
+              </span>
+            </button>
+
+            <div class="document-info">
+
+              <span class="eyebrow">{doc.subtitle}</span>
+
+              <h3>{doc.title}</h3>
+
+              <p>{doc.description}</p>
+
+              <div class="document-reference">
+                <span>REGISTRATION / REFERENCE</span>
+                <strong>{doc.reference}</strong>
+              </div>
+
+              {doc.pdf ? (
+                <div class="document-actions">
+                  <a
+                    href={doc.pdf}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="document-action primary-action"
+                  >
+                    <span>VIEW PDF</span>
+                    <span>↗</span>
+                  </a>
+
+                  <a
+                    href={doc.pdf}
+                    download="Trauzan-Elevator-Udyam-Registration.pdf"
+                    class="document-action secondary-action"
+                  >
+                    <span>DOWNLOAD</span>
+                    <span>↓</span>
+                  </a>
+                </div>
+              ) : (
+                <button
+                  type="button"
+                  class="document-action image-action"
+                  data-open-document={doc.id}
+                >
+                  <span>EXPLORE DOCUMENT</span>
+                  <span>↗</span>
+                </button>
+              )}
+
+            </div>
+
+          </article>
+        ))}
+
+      </div>
+
+      <div class="document-note">
+        <span>✳</span>
+        <p>
+          Registration information is displayed as supplied.
+          Please refer to the original documents for official verification.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- LOCATIONS -->
+
+  <section class="location-section">
+    <div class="container">
+
+      <div class="location-heading" data-reveal>
+        <span class="eyebrow">07 / OUR LOCATIONS</span>
+
+        <h2>
+          Where we<br />
+          <em>are based.</em>
+        </h2>
+      </div>
+
+      <div class="location-grid">
+
+        <article class="location-card" data-reveal>
+          <div class="location-top">
+            <span>REGISTERED BUSINESS ADDRESS</span>
+            <span>01 / DELHI</span>
+          </div>
+
+          <div class="location-content">
+            <span class="location-icon">⌖</span>
+
+            <h3>North East Delhi</h3>
+
+            <p>
+              Plot No. 1-A, 5GF, Ground Floor, Khasra No. 590,
+              Nearby N.D. Model Public School, Sabhapur, St. 6,
+              Milan Garden, Chaman Vihar, Gali No. 8, Block A,
+              Sabhapur Extension, North East Delhi – 110094, India.
+            </p>
+          </div>
+
+          <div class="location-bottom">
+            <span>DELHI, INDIA</span>
+            <span>01 — 02</span>
+          </div>
+        </article>
+
+        <article class="location-card location-light" data-reveal>
+          <div class="location-top">
+            <span>ADDITIONAL ADDRESS PROVIDED</span>
+            <span>02 / UP</span>
+          </div>
+
+          <div class="location-content">
+            <span class="location-icon">⌖</span>
+
+            <h3>Aligarh, Uttar Pradesh</h3>
+
+            <p>
+              Floor No. 0, Building No./Flat No. 0, Sikandarpur,
+              Post Bonai, Thana Alampur, Bonai Road, Sikri,
+              District Aligarh, Uttar Pradesh – 202133, India.
+            </p>
+          </div>
+
+          <div class="location-bottom">
+            <span>UTTAR PRADESH, INDIA</span>
+            <span>02 — 02</span>
+          </div>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- DOCUMENT VIEWER -->
+
+  <div
+    class="document-viewer"
+    data-document-viewer
+    aria-hidden="true"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Document viewer"
+    inert
+  >
+
+    <div class="viewer-header">
+
+      <div>
+        <span class="eyebrow light">TRAUZAN ELEVATOR / DOCUMENTS</span>
+        <h3 data-viewer-title>Document</h3>
+      </div>
+
+      <button
+        type="button"
+        class="viewer-close"
+        data-viewer-close
+        aria-label="Close viewer"
+      >
+        ×
+      </button>
+
+    </div>
+
+    <div class="viewer-content">
+
+      <button
+        type="button"
+        class="viewer-nav"
+        data-viewer-prev
+        aria-label="Previous page"
+      >
+        ←
+      </button>
+
+      <div class="viewer-image-wrap">
+        <img
+          src=""
+          alt="Certificate page"
+          data-viewer-image
+        />
+      </div>
+
+      <button
+        type="button"
+        class="viewer-nav"
+        data-viewer-next
+        aria-label="Next page"
+      >
+        →
+      </button>
+
+    </div>
+
+    <div class="viewer-footer">
+      <span data-viewer-counter>PAGE 01 / 01</span>
+
+      <div class="viewer-progress">
+        <span data-viewer-progress></span>
+      </div>
+
+      <span>TRAUZAN ELEVATOR</span>
+    </div>
+
+  </div>
+
+</BaseLayout>
+
+<style>
+:root {
+  --about-bg: #faf9f6;
+  --about-white: #ffffff;
+  --about-paper: #f0eee8;
+  --about-ink: #252923;
+  --about-muted: #777970;
+  --about-line: #e5e2d9;
+  --about-accent: #b69b70;
+  --about-dark: #303a36;
+}
+
+/* BASE */
+
+.about-section,
+.brand-statement,
+.mission-section,
+.leadership-section,
+.credentials-section,
+.documents-section,
+.location-section,
+.about-cta {
+  position: relative;
+  overflow: hidden;
+}
+
+.about-section,
+.leadership-section,
+.location-section {
+  background: var(--about-bg);
+  color: var(--about-ink);
+}
+
+.about-section .container,
+.brand-statement .container,
+.mission-section .container,
+.leadership-section .container,
+.credentials-section .container,
+.documents-section .container,
+.location-section .container,
+.about-cta .container {
+  position: relative;
+  z-index: 1;
+}
+
+.eyebrow {
+  font-size: 9px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  color: var(--about-muted);
+}
+
+.light {
+  color: rgba(255,255,255,.65);
+}
+
+.section-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--about-line);
+  color: var(--about-muted);
+  font-size: 9px;
+  letter-spacing: 1.7px;
+}
+
+/* ABOUT INTRO */
+
+.about-section {
+  padding: 105px 0 80px;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 90px;
+  align-items: center;
+  padding: 105px 0;
+}
+
+.section-symbol {
+  display: inline-block;
+  font-size: 34px;
+  color: var(--about-accent);
+  animation: floatSymbol 4s ease-in-out infinite;
+}
+
+.about-heading h2 {
+  font-size: clamp(60px, 7.5vw, 100px);
+  line-height: .94;
+  font-weight: 500;
+  letter-spacing: -.075em;
+  margin: 25px 0 35px;
+  color: var(--about-ink);
+}
+
+.about-heading h2 em,
+.credentials-heading h2 em,
+.documents-heading h2 em,
+.leadership-heading h2 em,
+.location-heading h2 em {
+  color: var(--about-accent);
+  font-style: normal;
+}
+
+.heading-index {
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: var(--about-muted);
+}
+
+.about-copy {
+  max-width: 470px;
+}
+
+.gold-line {
+  width: 55px;
+  height: 2px;
+  display: block;
+  background: var(--about-accent);
+  margin-bottom: 28px;
+}
+
+.about-copy h3 {
+  font-size: clamp(23px, 2.5vw, 32px);
+  line-height: 1.35;
+  letter-spacing: -.04em;
+  font-weight: 500;
+  margin: 18px 0 24px;
+  color: var(--about-ink);
+}
+
+.about-copy p {
+  font-size: 13px;
+  line-height: 1.95;
+  color: var(--about-muted);
+  margin: 0 0 16px;
+}
+
+.text-link {
+  display: inline-flex;
+  gap: 25px;
+  align-items: center;
+  margin-top: 18px;
+  padding-bottom: 10px;
+  color: var(--about-ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--about-accent);
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+}
+
+.text-link span {
+  font-size: 18px;
+  transition: transform .3s ease;
+}
+
+.text-link:hover span {
+  transform: translate(4px,-4px);
+}
+
+.about-bottom-line {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding-top: 22px;
+  border-top: 1px solid var(--about-line);
+  font-size: 9px;
+  letter-spacing: 1.8px;
+  color: var(--about-muted);
+}
+
+/* PHILOSOPHY */
+
+.brand-statement {
+  padding: 95px 0;
+  background: #efeee8;
+  color: var(--about-ink);
+}
+
+.statement-top,
+.statement-bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  font-size: 9px;
+  letter-spacing: 1.8px;
+  color: var(--about-muted);
+}
+
+.statement-content {
+  position: relative;
+  max-width: 1000px;
+  padding: 85px 0;
+}
+
+.statement-mark {
+  color: var(--about-accent);
+  font-size: 110px;
+  line-height: .6;
+  font-family: Georgia, serif;
+}
+
+.statement-content h2 {
+  max-width: 900px;
+  font-size: clamp(45px, 7vw, 85px);
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -.065em;
+  margin: 20px 0;
+  color: var(--about-ink);
+}
+
+.statement-content h2 em {
+  color: #8e8068;
+  font-style: normal;
+}
+
+.statement-content p {
+  max-width: 390px;
+  font-size: 13px;
+  line-height: 1.9;
+  color: var(--about-muted);
+  margin-top: 25px;
+}
+
+.statement-bottom {
+  border-top: 1px solid #dcd9d0;
+  padding-top: 20px;
+}
+
+/* MISSION / VISION */
+
+.mission-section {
+  background: #faf9f6;
+  color: var(--about-ink);
+  padding: 100px 0 110px;
+}
+
+.mission-section .section-meta {
+  border-color: var(--about-line);
+}
+
+.mission-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  margin-top: 55px;
+}
+
+.mission-card {
+  position: relative;
+  min-height: 440px;
+  padding: 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  isolation: isolate;
+  background: white;
+  border: 1px solid #eae7df;
+  transition: border-color .4s ease, transform .5s ease, box-shadow .5s ease;
+}
+
+.mission-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: radial-gradient(
+    circle at 85% 15%,
+    rgba(182,155,112,.15),
+    transparent 55%
+  );
+  opacity: 0;
+  transition: opacity .5s ease;
+}
+
+.mission-card:hover {
+  transform: translateY(-7px);
+  border-color: var(--about-accent);
+  box-shadow: 0 25px 60px rgba(40,35,25,.06);
+}
+
+.mission-card:hover::before {
+  opacity: 1;
+}
+
+.vision-card {
+  background: #f0eee8;
+}
+
+.mission-card-top {
+  display: flex;
+  justify-content: space-between;
+  font-size: 9px;
+  letter-spacing: 1.8px;
+  color: var(--about-muted);
+}
+
+.mission-symbol {
+  color: var(--about-accent);
+  font-size: 32px;
+  transition: transform .5s ease;
+}
+
+.mission-card:hover .mission-symbol {
+  transform: rotate(90deg);
+}
+
+.mission-card h3 {
+  position: relative;
+  z-index: 2;
+  font-size: clamp(38px, 4.5vw, 62px);
+  line-height: 1.02;
+  font-weight: 500;
+  letter-spacing: -.06em;
+  margin: 20px 0;
+  color: var(--about-ink);
+}
+
+.mission-card h3 em {
+  font-style: normal;
+  color: #a38c68;
+}
+
+.mission-card p {
+  position: relative;
+  z-index: 2;
+  max-width: 370px;
+  font-size: 13px;
+  line-height: 1.9;
+  color: var(--about-muted);
+}
+
+.mission-watermark {
+  position: absolute;
+  z-index: -1;
+  right: -10px;
+  bottom: -95px;
+  font-size: 280px;
+  font-weight: 700;
+  color: rgba(90,80,60,.035);
+  transition: transform .7s ease;
+}
+
+.mission-card:hover .mission-watermark {
+  transform: translate(-15px,-10px);
+}
+
+/* LEADERSHIP */
+
+.leadership-section {
+  padding: 115px 0;
+}
+
+.leadership-heading,
+.credentials-heading,
+.documents-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 40px;
+  margin-bottom: 65px;
+}
+
+.leadership-heading h2,
+.credentials-heading h2,
+.documents-heading h2 {
+  font-size: clamp(53px, 6.5vw, 85px);
+  font-weight: 500;
+  line-height: .97;
+  letter-spacing: -.065em;
+  margin: 24px 0 0;
+}
+
+.leadership-heading > p,
+.credentials-heading > p {
+  max-width: 350px;
+  font-size: 13px;
+  line-height: 1.95;
+  color: var(--about-muted);
+}
+
+.owners-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+
+.owner-card {
+  min-height: 325px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  background: #f0eee8;
+  color: var(--about-ink);
+  border: 1px solid #e9e6dd;
+  transition: transform .5s ease, box-shadow .5s ease;
+}
+
+.owner-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 55px rgba(0,0,0,.07);
+}
+
+.owner-light {
+  background: white;
+}
+
+.owner-top,
+.owner-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  font-size: 9px;
+  letter-spacing: 1.7px;
+  color: var(--about-muted);
+}
+
+.owner-top span:last-child {
+  color: var(--about-accent);
+  font-size: 24px;
+}
+
+.owner-middle {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.owner-initial {
+  flex-shrink: 0;
+  width: 95px;
+  height: 95px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--about-accent);
+  border-radius: 50%;
+  font-size: 43px;
+  color: #a38c68;
+  transition: transform .5s ease, background .4s ease;
+}
+
+.owner-card:hover .owner-initial {
+  transform: rotate(12deg);
+  background: rgba(182,155,112,.12);
+}
+
+.owner-middle h3 {
+  font-size: clamp(25px, 3vw, 36px);
+  font-weight: 500;
+  margin: 10px 0 4px;
+  color: var(--about-ink);
+}
+
+.owner-middle p {
+  font-size: 12px;
+  color: var(--about-muted);
+}
+
+.owner-bottom {
+  padding-top: 20px;
+  border-top: 1px solid var(--about-line);
+}
+
+/* CREDENTIALS */
+
+.credentials-section {
+  background: #efeee8;
+  color: var(--about-ink);
+  padding: 105px 0 95px;
+}
+
+.credentials-heading h2 em {
+  color: #94836a;
+}
+
+.credentials-strip {
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr;
+  gap: 35px;
+  align-items: center;
+  padding: 40px;
+  background: #fff;
+  border: 1px solid #e8e4da;
+}
+
+.credential-item {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.credential-item > span,
+.credential-item small {
+  font-size: 9px;
+  letter-spacing: 1.7px;
+  color: var(--about-muted);
+}
+
+.credential-item strong {
+  font-size: clamp(18px, 2.2vw, 28px);
+  font-weight: 500;
+  color: #a38c68;
+  overflow-wrap: anywhere;
+}
+
+.credential-divider {
+  height: 80px;
+  background: var(--about-line);
+}
+
+/* DOCUMENT GALLERY */
+
+.documents-section {
+  background: #efeee8;
+  color: var(--about-ink);
+  padding: 45px 0 120px;
+}
+
+.documents-heading h2 em {
+  color: #94836a;
+}
+
+.documents-heading-right {
+  max-width: 300px;
+}
+
+.documents-heading-right p {
+  font-size: 13px;
+  line-height: 1.9;
+  color: var(--about-muted);
+}
+
+.documents-heading-right > span {
+  display: block;
+  margin-top: 25px;
+  color: #8f7957;
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+}
+
+.documents-grid {
+  display: grid;
+  grid-template-columns: 1.12fr 1fr 1fr;
+  gap: 20px;
+  align-items: stretch;
+}
+
+.document-card {
+  min-width: 0;
+  background: white;
+  padding: 16px;
+  border: 1px solid #e8e5dd;
+  transition: transform .5s ease, box-shadow .5s ease;
+}
+
+.document-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px rgba(0,0,0,.08);
+}
+
+.document-top {
+  min-height: 34px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 8px;
+  letter-spacing: 1px;
+  color: var(--about-muted);
+}
+
+.document-format {
+  color: #a38c68;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.document-preview {
+  width: 100%;
+  height: 245px;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  padding: 0;
+  border: 0;
+  background: #f2f0e9;
+  cursor: pointer;
+}
+
+.document-featured .document-preview {
+  height: 310px;
+}
+
+.document-preview img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform .7s ease;
+}
+
+.document-preview:hover img {
+  transform: scale(1.06);
+}
+
+.document-overlay {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: rgba(43,52,47,.78);
+  color: white;
+  opacity: 0;
+  transition: opacity .35s ease;
+}
+
+.document-overlay > span {
+  font-size: 10px;
+  letter-spacing: 2px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--about-accent);
+  transform: translateY(10px);
+  transition: transform .35s ease;
+}
+
+.document-preview:hover .document-overlay {
+  opacity: 1;
+}
+
+.document-preview:hover .document-overlay > span {
+  transform: translateY(0);
+}
+
+.document-page-count {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  padding: 8px 10px;
+  background: #303a36;
+  color: white;
+  font-size: 8px;
+  letter-spacing: 1px;
+}
+
+.document-info {
+  padding: 24px 5px 5px;
+}
+
+.document-info h3 {
+  font-size: 23px;
+  font-weight: 500;
+  letter-spacing: -.5px;
+  margin: 10px 0;
+  color: var(--about-ink);
+}
+
+.document-info > p {
+  min-height: 64px;
+  font-size: 12px;
+  line-height: 1.8;
+  color: var(--about-muted);
+}
+
+.document-reference {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  padding: 18px 0;
+  margin-top: 10px;
+  border-top: 1px solid var(--about-line);
+}
+
+.document-reference span {
+  font-size: 8px;
+  letter-spacing: 1.3px;
+  color: var(--about-muted);
+}
+
+.document-reference strong {
+  font-size: 11px;
+  overflow-wrap: anywhere;
+}
+
+.document-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.document-action {
+  min-height: 48px;
+  padding: 12px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  border: 0;
+  cursor: pointer;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: background .3s ease, color .3s ease;
+}
+
+.document-action span:last-child {
+  font-size: 17px;
+}
+
+.primary-action,
+.image-action {
+  background: #303a36;
+  color: white;
+}
+
+.primary-action:hover,
+.image-action:hover {
+  background: #56645b;
+}
+
+.secondary-action {
+  background: #f0eee8;
+  color: var(--about-ink);
+}
+
+.secondary-action:hover {
+  background: var(--about-accent);
+  color: white;
+}
+
+.image-action {
+  width: 100%;
+  border-top: 1px solid var(--about-line);
+}
+
+.document-note {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 30px;
+  font-size: 11px;
+  color: var(--about-muted);
+}
+
+.document-note > span {
+  font-size: 20px;
+  color: var(--about-accent);
+}
+
+.document-note p {
+  line-height: 1.8;
+}
+
+/* LOCATIONS */
+
+.location-section {
+  padding: 115px 0;
+}
+
+.location-heading {
+  margin-bottom: 60px;
+}
+
+.location-heading h2 {
+  font-size: clamp(55px, 7vw, 88px);
+  font-weight: 500;
+  letter-spacing: -.065em;
+  line-height: .95;
+  margin: 25px 0 0;
+}
+
+.location-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.location-card {
+  min-height: 360px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #f0eee8;
+  color: var(--about-ink);
+  overflow: hidden;
+  border: 1px solid #e8e5dd;
+  transition: transform .45s ease, box-shadow .45s ease;
+}
+
+.location-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 20px 45px rgba(0,0,0,.06);
+}
+
+.location-light {
+  background: white;
+}
+
+.location-top,
+.location-bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 8px;
+  letter-spacing: 1.3px;
+  color: var(--about-muted);
+}
+
+.location-icon {
+  font-size: 30px;
+  color: var(--about-accent);
+}
+
+.location-content h3 {
+  font-size: clamp(26px, 3vw, 38px);
+  font-weight: 500;
+  margin: 15px 0;
+  color: var(--about-ink);
+}
+
+.location-content p {
+  max-width: 470px;
+  font-size: 12px;
+  line-height: 1.9;
+  color: var(--about-muted);
+}
+
+.location-bottom {
+  border-top: 1px solid var(--about-line);
+  padding-top: 20px;
+}
+
+/* CTA */
+
+.about-cta {
+  padding: 95px 0 25px;
+  background: #303a36;
+  color: white;
+}
+
+.cta-inner {
+  padding: 35px 0 95px;
+  max-width: 750px;
+}
+
+.cta-inner h2 {
+  font-size: clamp(60px, 8vw, 105px);
+  line-height: .95;
+  font-weight: 500;
+  letter-spacing: -.075em;
+  margin: 28px 0;
+}
+
+.cta-inner h2 em {
+  font-style: normal;
+  color: #c5ac83;
+}
+
+.cta-inner p {
+  font-size: 13px;
+  line-height: 1.9;
+  color: rgba(255,255,255,.7);
+  max-width: 350px;
+}
+
+.cta-button {
+  margin-top: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  padding: 17px 22px;
+  background: #c5ac83;
+  color: #303a36;
+  text-decoration: none;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  transition: background .3s ease, transform .3s ease;
+}
+
+.cta-button:hover {
+  background: white;
+  transform: translateY(-4px);
+}
+
+.cta-button span {
+  font-size: 18px;
+}
+
+.cta-bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  border-top: 1px solid rgba(255,255,255,.2);
+  padding: 22px 0;
+  font-size: 9px;
+  letter-spacing: 1.8px;
+  color: rgba(255,255,255,.65);
+}
+
+/* DOCUMENT VIEWER */
+
+.document-viewer {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 25px 4%;
+  background: #f6f4ee;
+  color: var(--about-ink);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity .3s ease, visibility .3s ease;
+}
+
+.document-viewer.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.viewer-header,
+.viewer-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.viewer-header h3 {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 8px 0;
+}
+
+.viewer-close {
+  width: 45px;
+  height: 45px;
+  border: 1px solid #d8d4ca;
+  background: white;
+  color: var(--about-ink);
+  font-size: 29px;
+  cursor: pointer;
+  transition: transform .3s ease, border-color .3s ease;
+}
+
+.viewer-close:hover {
+  transform: rotate(90deg);
+  border-color: var(--about-accent);
+}
+
+.viewer-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 0;
+  gap: 25px;
+  padding: 20px 0;
+}
+
+.viewer-image-wrap {
+  width: min(75vw, 850px);
+  height: 100%;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.viewer-image-wrap img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  box-shadow: 0 15px 60px rgba(0,0,0,.13);
+  animation: viewerImageIn .35s ease;
+}
+
+.viewer-nav {
+  width: 45px;
+  height: 45px;
+  flex-shrink: 0;
+  border: 1px solid #d8d4ca;
+  background: white;
+  color: var(--about-ink);
+  font-size: 22px;
+  cursor: pointer;
+  transition: background .3s ease;
+}
+
+.viewer-nav:hover:not(:disabled) {
+  background: #303a36;
+  color: white;
+}
+
+.viewer-nav:disabled {
+  opacity: .3;
+  cursor: not-allowed;
+}
+
+.viewer-footer {
+  padding: 20px 0 5px;
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  color: var(--about-muted);
+}
+
+.viewer-progress {
+  width: 35%;
+  height: 2px;
+  background: #dedbd3;
+}
+
+.viewer-progress span {
+  display: block;
+  height: 100%;
+  width: 0;
+  background: var(--about-accent);
+  transition: width .3s ease;
+}
+
+/* SCROLL ANIMATIONS */
+
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity .8s ease,
+    transform .8s cubic-bezier(.2,.7,.2,1);
+  transition-delay: calc(var(--card-index, 0) * 90ms);
+}
+
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* KEYFRAMES */
+
+@keyframes floatSymbol {
+  0%, 100% {
+    transform: translateY(0) rotate(0);
+  }
+  50% {
+    transform: translateY(-9px) rotate(45deg);
+  }
+}
+
+@keyframes viewerImageIn {
+  from {
+    opacity: 0;
+    transform: scale(.97);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* TABLET */
+
+@media(max-width: 950px) {
+  .about-grid {
+    gap: 45px;
+  }
+
+  .documents-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .document-featured {
+    grid-column: span 2;
+  }
+
+  .document-featured .document-preview {
+    height: 340px;
+  }
+
+  .document-card:not(.document-featured) .document-preview {
+    height: 270px;
+  }
+}
+
+/* MOBILE */
+
+@media(max-width: 600px) {
+  .about-section {
+    padding: 75px 0 65px;
+  }
+
+  .section-meta {
+    font-size: 7px;
+    letter-spacing: 1px;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 45px;
+    padding: 60px 0;
+  }
+
+  .about-heading h2 {
+    font-size: clamp(55px, 13vw, 75px);
+  }
+
+  .about-copy h3 {
+    font-size: 25px;
+  }
+
+  .about-bottom-line {
+    font-size: 7px;
+    letter-spacing: 1px;
+  }
+
+  .brand-statement {
+    padding: 70px 0;
+  }
+
+  .statement-top,
+  .statement-bottom {
+    font-size: 7px;
+    letter-spacing: 1px;
+  }
+
+  .statement-content {
+    padding: 65px 0;
+  }
+
+  .statement-content h2 {
+    font-size: 48px;
+  }
+
+  .mission-section {
+    padding: 75px 0;
+  }
+
+  .mission-grid {
+    grid-template-columns: 1fr;
+    margin-top: 40px;
+  }
+
+  .mission-card {
+    min-height: 355px;
+    padding: 27px;
+  }
+
+  .mission-card h3 {
+    font-size: 46px;
+  }
+
+  .leadership-section {
+    padding: 80px 0;
+  }
+
+  .leadership-heading,
+  .credentials-heading,
+  .documents-heading {
+    display: block;
+    margin-bottom: 40px;
+  }
+
+  .leadership-heading h2,
+  .credentials-heading h2,
+  .documents-heading h2 {
+    font-size: 57px;
+  }
+
+  .leadership-heading > p,
+  .credentials-heading > p {
+    margin-top: 25px;
+  }
+
+  .owners-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .owner-card {
+    min-height: 280px;
+    padding: 25px;
+  }
+
+  .owner-middle {
+    gap: 17px;
+  }
+
+  .owner-initial {
+    width: 75px;
+    height: 75px;
+    font-size: 35px;
+  }
+
+  .credentials-section {
+    padding: 75px 0 60px;
+  }
+
+  .credentials-strip {
+    grid-template-columns: 1fr;
+    padding: 25px;
+    gap: 25px;
+  }
+
+  .credential-divider {
+    width: 100%;
+    height: 1px;
+  }
+
+  .credential-item strong {
+    font-size: 21px;
+  }
+
+  .documents-section {
+    padding: 35px 0 75px;
+  }
+
+  .documents-heading-right {
+    margin-top: 25px;
+  }
+
+  .documents-grid {
+    grid-template-columns: 1fr;
+    gap: 17px;
+  }
+
+  .document-featured {
+    grid-column: auto;
+  }
+
+  .document-preview,
+  .document-featured .document-preview,
+  .document-card:not(.document-featured) .document-preview {
+    height: 300px;
+  }
+
+  .document-info h3 {
+    font-size: 24px;
+  }
+
+  .document-info > p {
+    min-height: auto;
+    margin-bottom: 20px;
+  }
+
+  .location-section {
+    padding: 75px 0;
+  }
+
+  .location-heading {
+    margin-bottom: 40px;
+  }
+
+  .location-heading h2 {
+    font-size: 62px;
+  }
+
+  .location-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .location-card {
+    min-height: 335px;
+    padding: 25px;
+  }
+
+  .about-cta {
+    padding: 65px 0 20px;
+  }
+
+  .cta-inner {
+    padding: 20px 0 70px;
+  }
+
+  .cta-inner h2 {
+    font-size: 68px;
+  }
+
+  .cta-bottom {
+    font-size: 7px;
+    letter-spacing: 1px;
+  }
+
+  .document-viewer {
+    padding: 20px 10px;
+  }
+
+  .viewer-header h3 {
+    font-size: 16px;
+  }
+
+  .viewer-content {
+    gap: 7px;
+  }
+
+  .viewer-nav {
+    width: 32px;
+    height: 38px;
+    font-size: 17px;
+  }
+
+  .viewer-image-wrap {
+    width: calc(100% - 78px);
+  }
+
+  .viewer-footer {
+    font-size: 7px;
+    gap: 8px;
+  }
+
+  .viewer-progress {
+    width: 25%;
+  }
+}
+
+/* ACCESSIBILITY */
+
+.document-preview:focus-visible,
+.document-action:focus-visible,
+.viewer-close:focus-visible,
+.viewer-nav:focus-visible,
+.cta-button:focus-visible {
+  outline: 2px solid var(--about-accent);
+  outline-offset: 4px;
+}
+
+@media(prefers-reduced-motion: reduce) {
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+</style>
+
+<script>
+  // DOCUMENT VIEWER
+
+ 
+  // DOCUMENT VIEWER
+
+  const viewer = document.querySelector('[data-document-viewer]');
+
+  if (viewer) {
+    const image = viewer.querySelector('[data-viewer-image]');
+    const title = viewer.querySelector('[data-viewer-title]');
+    const counter = viewer.querySelector('[data-viewer-counter]');
+    const progress = viewer.querySelector('[data-viewer-progress]');
+
+    const prev = viewer.querySelector('[data-viewer-prev]');
+    const next = viewer.querySelector('[data-viewer-next]');
+    const close = viewer.querySelector('[data-viewer-close]');
+
+    // IMPORTANT: Use the same filenames as the documents array.
+
+    const documentData = {
+      gst: {
+        title: 'GST Registration Certificate',
+        pages: [
+          '/images/gst1.webp',
+          '/images/gst2.webp',
+          '/images/gst3.webp',
+        ],
+      },
+
+      business: {
+        title: 'Business Registration Certificate',
+        pages: [
+          '/images/rc1.webp',
+          '/images/rc2.webp',
+          '/images/rc3.webp',
+        ],
+      },
+
+      udyam: {
+        title: 'Udyam Registration Certificate',
+        pages: [
+          '/images/udyam-page-1.webp',
+        ],
+      },
+    };
+
+    let currentDocument = null;
+    let currentPage = 0;
+    let previousFocus = null;
+    let previousOverflow = '';
+
+    function updateViewer() {
+      const doc = documentData[currentDocument];
+
+      if (!doc) return;
+
+      image.src = doc.pages[currentPage];
+      image.alt = `${doc.title} - Page ${currentPage + 1}`;
+
+      title.textContent = doc.title;
+
+      counter.textContent =
+        `PAGE ${String(currentPage + 1).padStart(2, '0')} / ${String(doc.pages.length).padStart(2, '0')}`;
+
+      progress.style.width =
+        `${((currentPage + 1) / doc.pages.length) * 100}%`;
+
+      prev.disabled = currentPage === 0;
+      next.disabled = currentPage === doc.pages.length - 1;
+    }
+
+    function openViewer(id, trigger) {
+      if (!documentData[id]) return;
+
+      currentDocument = id;
+      currentPage = 0;
+
+      previousFocus = trigger;
+      previousOverflow = document.body.style.overflow;
+
+      updateViewer();
+
+      viewer.inert = false;
+      viewer.classList.add('is-open');
+      viewer.setAttribute('aria-hidden', 'false');
+
+      document.body.style.overflow = 'hidden';
+
+      close.focus();
+    }
+
+    function closeViewer() {
+      if (!currentDocument) return;
+
+      viewer.classList.remove('is-open');
+      viewer.setAttribute('aria-hidden', 'true');
+      viewer.inert = true;
+
+      document.body.style.overflow = previousOverflow;
+
+      currentDocument = null;
+
+      if (previousFocus && document.contains(previousFocus)) {
+        previousFocus.focus();
+      }
+    }
+
+    function nextPage() {
+      const doc = documentData[currentDocument];
+
+      if (!doc || currentPage >= doc.pages.length - 1) return;
+
+      currentPage++;
+      updateViewer();
+    }
+
+    function previousPage() {
+      if (!currentDocument || currentPage <= 0) return;
+
+      currentPage--;
+      updateViewer();
+    }
+
+    // OPEN DOCUMENT
+
+    document.querySelectorAll('[data-open-document]').forEach((button) => {
+      button.addEventListener('click', () => {
+        openViewer(button.dataset.openDocument, button);
+      });
+    });
+
+    // VIEWER BUTTONS
+
+    close.addEventListener('click', closeViewer);
+    next.addEventListener('click', nextPage);
+    prev.addEventListener('click', previousPage);
+
+    // CLOSE ON BACKGROUND CLICK
+
+    viewer.addEventListener('click', (event) => {
+      if (event.target === viewer) {
+        closeViewer();
+      }
+    });
+
+    // KEYBOARD CONTROLS
+
+    document.addEventListener('keydown', (event) => {
+      if (!currentDocument) return;
+
+      if (event.key === 'Escape') closeViewer();
+      if (event.key === 'ArrowRight') nextPage();
+      if (event.key === 'ArrowLeft') previousPage();
+    });
+  }
+
+  // SCROLL REVEAL
+
+  const revealItems = document.querySelectorAll('[data-reveal]');
+
+  const reduceMotion = window.matchMedia(
+    '(prefers-reduced-motion: reduce)'
+  ).matches;
+
+  if ('IntersectionObserver' in window && !reduceMotion) {
+    const observer = new IntersectionObserver(
+      (entries, observerInstance) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observerInstance.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+        rootMargin: '0px 0px -40px 0px',
+      }
+    );
+
+    revealItems.forEach((item) => observer.observe(item));
+  } else {
+    revealItems.forEach((item) => {
+      item.classList.add('is-visible');
+    });
+  }
+
+</script>

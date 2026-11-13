@@ -1,0 +1,4 @@
+---
+const { eyebrow='TRAUZAN ELEVATOR', title, accent, description, image='/images/hero-elevator.svg' } = Astro.props;
+---
+<section class="page-hero" style={`--hero-image:url('${image}')`}><div class="container page-hero-content"><span class="eyebrow light">{eyebrow}</span><h1>{title}<br/><em>{accent}</em></h1>{description && <p>{description}</p>}<div class="hero-line"><span>01 — 05</span><span>PRECISION · SAFETY · SERVICE</span></div></div></section>

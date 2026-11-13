@@ -1,0 +1,2078 @@
+
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const slides = [
+  {
+    tag: 'VERTICAL MOBILITY, REDEFINED',
+    title: 'Move beyond',
+    accent: 'the expected.',
+    desc: 'Thoughtful elevator solutions built around the way people live, work and move.',
+    image: '/images/elevater10.png'
+  },
+  {
+    tag: 'ENGINEERED FOR EVERYDAY LIFE',
+    title: 'A smoother way',
+    accent: 'to move.',
+    desc: 'From installation to ongoing care, we help keep every journey comfortable and dependable.',
+    image: '/images/elevater11.png'
+  },
+  {
+    tag: 'SAFETY IN EVERY DETAIL',
+    title: 'Confidence at',
+    accent: 'every level.',
+    desc: 'Reliable lift and escalator services for residential, commercial and industrial spaces.',
+    image: '/images/elevater13.png'
+  }
+];
+
+const services = [
+  ['Lift & Elevator Installation', 'End-to-end installation solutions planned around your building, usage and requirements.'],
+  ['Repair & Maintenance', 'Responsive maintenance and repair support to help keep your equipment performing smoothly.'],
+  ['Lift Modernization', 'Upgrade existing systems with improvements in performance, comfort and appearance.'],
+  ['Passenger & Goods Lifts', 'Practical vertical transportation solutions for people, materials and different building needs.'],
+  ['Escalator Services', 'Installation and servicing solutions for escalators in commercial environments.'],
+  ['Annual Maintenance (AMC)', 'Planned maintenance support designed to help maintain reliable day-to-day operation.']
+];
+
+const processes = [
+  ['Understanding Your Needs', 'We begin by understanding your building, requirements and expectations.'],
+  ['Site Visit & Planning', 'Our team evaluates the site and discusses suitable solutions for your project.'],
+  ['Installation & Execution', 'The agreed solution is carried out with attention to quality and safety.'],
+  ['Ongoing Support', 'We remain available for maintenance, servicing and assistance.']
+];
+
+const reasons = [
+  ['Safety Comes First', 'A safety-conscious approach guides the way we plan, install and maintain elevator systems.'],
+  ['Solutions That Fit', 'Recommendations shaped around your building, application and operational requirements.'],
+  ['Support You Can Reach', 'Direct contact with our team for enquiries, service requests and ongoing assistance.'],
+  ['Long-Term Thinking', 'Maintenance and modernization options that help support performance over time.']
+];
+
+const faqs = [
+  ['What elevator services does Trauzan provide?', 'We provide lift installation, repair, maintenance, modernization, passenger and goods lift solutions, and escalator services.'],
+  ['Do you provide annual maintenance contracts (AMC)?', 'Yes. We offer annual maintenance support. Contact our team to discuss the requirements of your building and equipment.'],
+  ['Do you provide elevator repair services?', 'Yes. You can contact our team regarding elevator repair and maintenance requirements.'],
+  ['Can an existing elevator be modernized?', 'Yes. Existing elevator systems can be assessed for suitable modernization options depending on their condition and requirements.'],
+  ['Do you work with residential and commercial buildings?', 'We cater to residential, commercial and industrial building requirements.'],
+  ['How can I request a quotation?', 'Visit our contact page or email us with your project details. Our team can discuss the next steps with you.'],
+  ['Where does Trauzan Elevator provide services?', 'Trauzan Elevator serves Delhi NCR. Contact our team to confirm service availability for your location.']
+];
+---
+
+<BaseLayout
+  title="Trauzan Elevator | Premium Lift, Elevator & Escalator Services"
+  description="Explore Trauzan Elevator for lift installation, repair, maintenance, modernization, passenger lifts, goods lifts and escalator services in Delhi NCR."
+>
+
+<!-- HERO -->
+<section class="home-hero" data-slider>
+  {slides.map((slide, i) => (
+    <article
+      class:list={['hero-slide', i === 0 && 'is-active']}
+      style={`--slide-image:url('${slide.image}')`}
+      aria-hidden={i === 0 ? 'false' : 'true'}
+    >
+      <div class="hero-shade"></div>
+
+      <div class="container hero-inner">
+        <span class="eyebrow light">{slide.tag}</span>
+
+        <h1>
+          {slide.title}<br />
+          <em>{slide.accent}</em>
+        </h1>
+
+        <p>{slide.desc}</p>
+
+        <div class="hero-actions">
+          <a class="button button-gold" href="/contact/">
+            Explore solutions <span>↗</span>
+          </a>
+
+          <a class="button button-ghost" href="/services/">
+            Discover services <span>↗</span>
+          </a>
+        </div>
+      </div>
+    </article>
+  ))}
+
+  <div class="container slider-controls">
+    <div class="slide-dots">
+      {slides.map((_, i) => (
+        <button
+          class:list={{ 'is-active': i === 0 }}
+          aria-label={`Show slide ${i + 1}`}
+          data-slide-to={i}
+        ></button>
+      ))}
+    </div>
+
+   
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<div class="trust-strip">
+  <div class="container trust-inner">
+    <span>Solutions for every building</span>
+    <span>Safety-led approach</span>
+    <span>Professional support</span>
+    <span>Long-term reliability</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="section intro-section reveal">
+  <div class="container intro-grid">
+    <div class="intro-visual">
+      <img
+        src="/images/elevater1.webp"
+        alt="Contemporary architectural interior"
+        loading="lazy"
+      />
+
+      <div class="image-note">
+        <span>TRAUZAN ELEVATOR</span>
+        <strong>Moving you<br />with confidence.</strong>
+      </div>
+    </div>
+
+    <div class="intro-copy">
+      <span class="eyebrow">WHO WE ARE</span>
+
+      <h2>
+        More than movement.<br />
+        <em>A promise of care.</em>
+      </h2>
+
+      <p class="lead">
+        We bring together practical expertise, dependable service and a
+        safety-first approach to vertical transportation.
+      </p>
+
+      <p>
+        Trauzan Elevator is your partner for complete lift, elevator and
+        escalator solutions. We work with residential, commercial and
+        industrial clients to deliver installation, repair, maintenance
+        and modernization services shaped around real-world needs.
+      </p>
+
+      <a class="text-link" href="/about/">
+        Discover Trauzan <span>↗</span>
+      </a>
+
+      <div class="owner-note">
+        <span class="owner-initials">BS / RS</span>
+
+        <div>
+          <strong>Bhamar Singh & Roop Singh</strong>
+          <small>Owners · Trauzan Elevator</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HIGHLIGHTS -->
+<section class="stats-section reveal">
+  <div class="container stats-grid">
+    <div>
+      <span class="stats-number">360°</span>
+      <p>Complete elevator<br />solutions</p>
+    </div>
+
+    <div>
+      <span class="stats-number">NCR</span>
+      <p>Delhi NCR<br />service area</p>
+    </div>
+
+    <div>
+      <span class="stats-number">Care</span>
+      <p>Customer-focused<br />approach</p>
+    </div>
+
+    <div>
+      <span class="stats-number">Safety</span>
+      <p>Attention to<br />every detail</p>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section services-section reveal">
+  <div class="container">
+    <div class="section-heading">
+      <div>
+        <span class="eyebrow">WHAT WE DO</span>
+
+        <h2>
+          Solutions for every<br />
+          <em>vertical journey.</em>
+        </h2>
+      </div>
+
+      <p>
+        From the first installation to dependable ongoing care, our
+        services are designed to support the full life of your elevator system.
+      </p>
+    </div>
+
+    <div class="service-grid">
+      {services.map(([title, desc]) => (
+        <a class="service-card" href="/services/">
+          <div>
+            <h3>{title}</h3>
+            <p>{desc}</p>
+          </div>
+
+          <span class="service-arrow">↗</span>
+        </a>
+      ))}
+    </div>
+
+    <div class="section-bottom-link">
+      <a class="text-link" href="/services/">
+        View all services <span>↗</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURE BAND -->
+<section class="feature-band">
+  <div class="feature-image"></div>
+
+  <div class="feature-content reveal">
+    <span class="eyebrow light">OUR APPROACH</span>
+
+    <h2>
+      Every detail matters.<br />
+      <em>Every journey counts.</em>
+    </h2>
+
+    <p>
+      We believe dependable vertical mobility starts with careful planning,
+      quality workmanship and service that puts people first.
+    </p>
+
+    <a class="button button-gold" href="/about/">
+      The Trauzan approach <span>↗</span>
+    </a>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="section process-section reveal">
+  <div class="container">
+    <div class="section-heading">
+      <div>
+        <span class="eyebrow">HOW WE WORK</span>
+
+        <h2>
+          A simpler way to<br />
+          <em>move forward.</em>
+        </h2>
+      </div>
+
+      <p>
+        From your first enquiry to ongoing maintenance, we make every
+        step clear and straightforward.
+      </p>
+    </div>
+
+    <div class="process-grid">
+      {processes.map(([title, desc], i) => (
+        <article class="process-card">
+          <span class="process-number">0{i + 1}</span>
+          <div class="process-line"></div>
+          <h3>{title}</h3>
+          <p>{desc}</p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="section reasons-section reveal">
+  <div class="container">
+    <div class="section-heading">
+      <div>
+        <span class="eyebrow">THE TRAUZAN DIFFERENCE</span>
+
+        <h2>
+          Good service is<br />
+          <em>built on trust.</em>
+        </h2>
+      </div>
+
+      <p>
+        We focus on the things that matter most: safety, clear communication,
+        practical solutions and reliable support.
+      </p>
+    </div>
+
+    <div class="reason-grid">
+      {reasons.map(([title, desc], i) => (
+        <article>
+          <span class="reason-number">0{i + 1}</span>
+          <h3>{title}</h3>
+          <p>{desc}</p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="section gallery-preview reveal">
+  <div class="container">
+    <div class="section-heading">
+      <div>
+        <span class="eyebrow">A CLOSER LOOK</span>
+
+        <h2>
+          Designed for the<br />
+          <em>spaces we share.</em>
+        </h2>
+      </div>
+
+      <a class="text-link" href="/gallery/">
+        Explore gallery <span>↗</span>
+      </a>
+    </div>
+
+    <div class="preview-grid">
+      <img
+        src="/images/elevater6.webp"
+        alt="Elegant modern interior"
+        loading="lazy"
+      />
+
+      <img
+        src="/images/elevater13.png"
+        alt="Premium contemporary interior"
+        loading="lazy"
+      />
+
+      <img
+        src="/images/elevater10.png"
+        alt="Architectural interior details"
+        loading="lazy"
+      />
+    </div>
+
+    <p class="disclaimer">
+      Illustrative architectural imagery. Actual Trauzan project photographs
+      can be added here.
+    </p>
+  </div>
+</section>
+
+<!-- TESTIMONIALS - LIGHT PREMIUM DESIGN -->
+<section class="testimonials-section reveal">
+  <div class="container">
+
+    <div class="testimonials-heading">
+      <span class="eyebrow">THE TRAUZAN EXPERIENCE</span>
+
+      <h2>
+        More than a service.<br />
+        <em>A relationship built on trust.</em>
+      </h2>
+
+      <p>
+        Every building has different needs. We believe in understanding
+        them, delivering thoughtful solutions and being there when
+        dependable support matters.
+      </p>
+    </div>
+
+    <div class="testimonial-grid">
+
+      <article class="testimonial-card">
+        <div class="testimonial-card-top">
+          <span class="testimonial-index">01 / OUR PROMISE</span>
+          <span class="testimonial-symbol">“</span>
+        </div>
+
+        <h3>
+          Your safety is never
+          <em>an afterthought.</em>
+        </h3>
+
+        <p>
+          From installation planning to ongoing maintenance, we approach
+          every requirement with attention to safety, quality and detail.
+        </p>
+
+        <div class="testimonial-card-bottom">
+          <span class="commitment-icon">01</span>
+          <div>
+            <strong>Safety First</strong>
+            <small>At every level</small>
+          </div>
+        </div>
+      </article>
+
+      <article class="testimonial-card testimonial-card-featured">
+        <div class="testimonial-card-top">
+          <span class="testimonial-index">02 / OUR APPROACH</span>
+          <span class="testimonial-symbol">“</span>
+        </div>
+
+        <h3>
+          Every solution starts
+          <em>with understanding.</em>
+        </h3>
+
+        <p>
+          We take the time to understand your building, your expectations
+          and your specific requirements before recommending a suitable
+          elevator solution.
+        </p>
+
+        <div class="testimonial-card-bottom">
+          <span class="commitment-icon">02</span>
+          <div>
+            <strong>Thoughtful Solutions</strong>
+            <small>Made around your needs</small>
+          </div>
+        </div>
+      </article>
+
+      <article class="testimonial-card">
+        <div class="testimonial-card-top">
+          <span class="testimonial-index">03 / OUR COMMITMENT</span>
+          <span class="testimonial-symbol">“</span>
+        </div>
+
+        <h3>
+          Good service goes
+          <em>beyond installation.</em>
+        </h3>
+
+        <p>
+          Our commitment continues through maintenance, repair and
+          assistance, helping you take care of your elevator system
+          over time.
+        </p>
+
+        <div class="testimonial-card-bottom">
+          <span class="commitment-icon">03</span>
+          <div>
+            <strong>Continued Support</strong>
+            <small>Here when you need us</small>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="testimonial-closing">
+      <div>
+        <span class="closing-label">THE TRAUZAN STANDARD</span>
+        <h3>Moving people. Building confidence.</h3>
+      </div>
+
+      <a href="/contact/" class="testimonial-contact">
+        Let's work together <span>↗</span>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section faq-section reveal">
+  <div class="container">
+
+    <div class="faq-top">
+      <div class="faq-heading">
+        <span class="eyebrow">FREQUENTLY ASKED QUESTIONS</span>
+
+        <h2>
+          Questions worth<br />
+          <em>answering.</em>
+        </h2>
+
+        <p>
+          Everything you need to know about our elevator,
+          installation and maintenance services.
+        </p>
+
+        <a href="/contact/" class="faq-contact-link">
+          Have another question?
+          <span>Let's talk ↗</span>
+        </a>
+      </div>
+
+      <div class="faq-side-note">
+        <p>INFORMATION ABOUT<br />TRAUZAN ELEVATOR</p>
+      </div>
+    </div>
+
+    <div class="faq-main">
+      <div class="faq-list">
+        {faqs.map(([question, answer], i) => (
+          <details class="faq-item" open={i === 0}>
+            <summary>
+              <span class="faq-question">{question}</span>
+
+              <span class="faq-toggle">
+                <span></span>
+                <span></span>
+              </span>
+            </summary>
+
+            <div class="faq-answer">
+              <p>{answer}</p>
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+
+    <div class="faq-bottom">
+      <span>TRAUZAN ELEVATOR · CUSTOMER SUPPORT</span>
+      <a href="/contact/">GET IN TOUCH ↗</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- LOCAL BUSINESS SEO -->
+<script
+  type="application/ld+json"
+  set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Trauzan Elevator",
+    "url": "https://www.trauzanelevator.co.in",
+    "telephone": "+91-9911806270",
+    "email": "Trauzanelevator@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Plot No. 1-A, 5GF, Ground Floor, Khasra No. 590, Sabhapur Extension",
+      "addressLocality": "North East Delhi",
+      "postalCode": "110094",
+      "addressCountry": "IN"
+    },
+    "founder": [
+      { "@type": "Person", "name": "Bhamar Singh" },
+      { "@type": "Person", "name": "Roop Singh" }
+    ],
+    "areaServed": "Delhi NCR",
+    "description": "Lift installation, elevator repair, maintenance, modernization and escalator services."
+  })}
+></script>
+
+<!-- SCRIPTS -->
+<script>
+  // HERO SLIDER
+  const heroSlider = document.querySelector('[data-slider]');
+
+  if (heroSlider) {
+    const heroSlides = [...heroSlider.querySelectorAll('.hero-slide')];
+    const dots = [...heroSlider.querySelectorAll('[data-slide-to]')];
+    const previous = heroSlider.querySelector('[data-slide-prev]');
+    const next = heroSlider.querySelector('[data-slide-next]');
+
+    let activeHero = 0;
+    let heroInterval = null;
+
+    const showHeroSlide = (index) => {
+      activeHero = (index + heroSlides.length) % heroSlides.length;
+
+      heroSlides.forEach((slide, i) => {
+        const selected = i === activeHero;
+
+        slide.classList.toggle('is-active', selected);
+        slide.setAttribute('aria-hidden', String(!selected));
+      });
+
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('is-active', i === activeHero);
+      });
+    };
+
+    const stopHeroAutoplay = () => {
+      if (heroInterval) {
+        window.clearInterval(heroInterval);
+        heroInterval = null;
+      }
+    };
+
+    const startHeroAutoplay = () => {
+      stopHeroAutoplay();
+
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        return;
+      }
+
+      heroInterval = window.setInterval(() => {
+        showHeroSlide(activeHero + 1);
+      }, 2000);
+    };
+
+    dots.forEach((dot, i) => {
+      dot.addEventListener('click', () => {
+        showHeroSlide(i);
+        startHeroAutoplay();
+      });
+    });
+
+    previous?.addEventListener('click', () => {
+      showHeroSlide(activeHero - 1);
+      startHeroAutoplay();
+    });
+
+    next?.addEventListener('click', () => {
+      showHeroSlide(activeHero + 1);
+      startHeroAutoplay();
+    });
+
+    heroSlider.addEventListener('mouseenter', stopHeroAutoplay);
+    heroSlider.addEventListener('mouseleave', startHeroAutoplay);
+
+    showHeroSlide(0);
+    startHeroAutoplay();
+  }
+
+  // SCROLL REVEAL
+  const revealElements = document.querySelectorAll('.reveal');
+
+  if ('IntersectionObserver' in window) {
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    revealElements.forEach((element) => {
+      revealObserver.observe(element);
+    });
+  } else {
+    revealElements.forEach((element) => {
+      element.classList.add('visible');
+    });
+  }
+
+  // FAQ ACCORDION
+  document.querySelectorAll('.faq-item').forEach((item) => {
+    item.addEventListener('toggle', () => {
+      if (item.open) {
+        document.querySelectorAll('.faq-item').forEach((other) => {
+          if (other !== item) {
+            other.open = false;
+          }
+        });
+      }
+    });
+  });
+</script>
+
+<style>
+  :global(html) {
+    scroll-behavior: smooth;
+  }
+
+  :global(body) {
+    overflow-x: hidden;
+  }
+
+  :global(*) {
+    box-sizing: border-box;
+  }
+
+  :global(::selection) {
+    background: #c3a36b;
+    color: white;
+  }
+
+  .container {
+    width: min(1200px, calc(100% - 60px));
+    margin: auto;
+  }
+
+  .section {
+    padding: 110px 0;
+  }
+
+  .eyebrow {
+    display: inline-block;
+    color: #a1834e;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  .eyebrow.light {
+    color: #e0c38d;
+  }
+
+  h2 {
+    font-size: clamp(35px, 4vw, 55px);
+    font-weight: 400;
+    letter-spacing: -1.8px;
+    line-height: 1.13;
+    margin: 0 0 24px;
+  }
+
+  h2 em {
+    font-family: Georgia, serif;
+    font-weight: 400;
+    color: #b39358;
+  }
+
+  p {
+    line-height: 1.85;
+  }
+
+  /* BUTTONS */
+  .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    padding: 17px 25px;
+    text-decoration: none;
+    font-size: 12px;
+    transition: .35s ease;
+  }
+
+  .button-gold {
+    background: #b3945b;
+    color: white;
+    border: 1px solid #b3945b;
+  }
+
+  .button-gold:hover {
+    background: #9c7a40;
+    border-color: #9c7a40;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(179,148,91,.2);
+  }
+
+  .button-ghost {
+    color: white;
+    border: 1px solid rgba(255,255,255,.55);
+    background: transparent;
+  }
+
+  .button-ghost:hover {
+    background: white;
+    color: #25231f;
+  }
+
+  /* HERO */
+  .home-hero {
+    height: min(790px, 90vh);
+    min-height: 610px;
+    position: relative;
+    background: #24221e;
+    color: white;
+    overflow: hidden;
+  }
+
+  .hero-slide {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease, visibility 1s;
+  }
+
+  .hero-slide::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: var(--slide-image);
+    background-size: cover;
+    background-position: center;
+    transform: scale(1.08);
+    transition: transform 7s ease;
+  }
+
+  .hero-slide.is-active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 1;
+  }
+
+  .hero-slide.is-active::before {
+    transform: scale(1);
+  }
+
+  .hero-shade {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      90deg,
+      rgba(15,14,12,.78),
+      rgba(15,14,12,.49) 55%,
+      rgba(15,14,12,.13)
+    );
+  }
+
+  .hero-inner {
+    position: relative;
+    z-index: 2;
+    padding-bottom: 30px;
+  }
+
+  .hero-inner h1 {
+    font-size: clamp(55px, 7.3vw, 94px);
+    font-weight: 400;
+    line-height: 1.03;
+    letter-spacing: -3.5px;
+    margin: 0 0 26px;
+  }
+
+  .hero-inner h1 em {
+    font-family: Georgia, serif;
+    color: #d5b578;
+    font-weight: 400;
+  }
+
+  .hero-inner p {
+    max-width: 500px;
+    color: rgba(255,255,255,.82);
+    font-size: 15px;
+    margin-bottom: 32px;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .slider-controls {
+    position: absolute;
+    z-index: 5;
+    bottom: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .slide-dots {
+    display: flex;
+    gap: 9px;
+  }
+
+  .slide-dots button {
+    width: 25px;
+    height: 3px;
+    background: rgba(255,255,255,.4);
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: .3s;
+  }
+
+  .slide-dots button.is-active {
+    width: 45px;
+    background: #d7b777;
+  }
+
+  .slide-arrows {
+    display: flex;
+    gap: 10px;
+  }
+
+  .slide-arrows button {
+    height: 42px;
+    width: 42px;
+    border: 1px solid rgba(255,255,255,.5);
+    color: white;
+    background: transparent;
+    cursor: pointer;
+    transition: .3s;
+  }
+
+  .slide-arrows button:hover {
+    background: #b3945b;
+    border-color: #b3945b;
+  }
+
+  /* TRUST STRIP */
+  .trust-strip {
+    background: #f7f5f0;
+    border-bottom: 1px solid #eee9df;
+  }
+
+  .trust-inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    padding: 25px 0;
+  }
+
+  .trust-inner span {
+    color: #777065;
+    font-size: 10px;
+    letter-spacing: 1px;
+    font-weight: 600;
+  }
+
+  /* INTRO */
+  .intro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 90px;
+    align-items: center;
+  }
+
+  .intro-visual {
+    position: relative;
+    min-height: 550px;
+  }
+
+  .intro-visual img {
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+  }
+
+  .image-note {
+    position: absolute;
+    bottom: -25px;
+    right: -20px;
+    background: #b3945b;
+    color: white;
+    padding: 30px 35px;
+    min-width: 230px;
+  }
+
+  .image-note span {
+    font-size: 9px;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 15px;
+  }
+
+  .image-note strong {
+    font-size: 24px;
+    font-family: Georgia, serif;
+    font-weight: 400;
+    line-height: 1.35;
+  }
+
+  .intro-copy h2 {
+    margin-bottom: 30px;
+  }
+
+  .intro-copy p {
+    color: #77736c;
+    font-size: 14px;
+    margin-bottom: 22px;
+  }
+
+  .intro-copy .lead {
+    font-size: 17px;
+    color: #34312c;
+  }
+
+  .text-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 20px;
+    text-decoration: none;
+    color: #a0824c;
+    border-bottom: 1px solid #c9b48e;
+    padding-bottom: 9px;
+    font-size: 13px;
+    font-weight: 600;
+    transition: .3s;
+  }
+
+  .text-link:hover {
+    gap: 30px;
+    color: #806438;
+  }
+
+  .owner-note {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    border-top: 1px solid #e9e4da;
+    margin-top: 40px;
+    padding-top: 27px;
+  }
+
+  .owner-initials {
+    background: #f2eee5;
+    color: #a1834e;
+    padding: 15px;
+    font-family: Georgia, serif;
+    font-size: 15px;
+  }
+
+  .owner-note strong,
+  .owner-note small {
+    display: block;
+  }
+
+  .owner-note strong {
+    font-size: 13px;
+  }
+
+  .owner-note small {
+    color: #888;
+    margin-top: 5px;
+  }
+
+  /* HIGHLIGHTS */
+  .stats-section {
+    background: #f7f5f0;
+    border-top: 1px solid #eee9df;
+    border-bottom: 1px solid #eee9df;
+    padding: 42px 0;
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+  }
+
+  .stats-grid > div {
+    padding: 10px 25px;
+    border-right: 1px solid #ded7c9;
+  }
+
+  .stats-grid > div:first-child {
+    padding-left: 0;
+  }
+
+  .stats-grid > div:last-child {
+    border: none;
+  }
+
+  .stats-number {
+    color: #a78951;
+    font-size: 32px;
+    font-family: Georgia, serif;
+  }
+
+  .stats-grid p {
+    font-size: 12px;
+    color: #777;
+    margin-bottom: 0;
+  }
+
+  /* SECTION HEADINGS */
+  .section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 45px;
+    margin-bottom: 55px;
+  }
+
+  .section-heading h2 {
+    margin-bottom: 0;
+  }
+
+  .section-heading > p {
+    max-width: 390px;
+    font-size: 14px;
+    color: #77736c;
+    margin-bottom: 5px;
+  }
+
+  /* SERVICES */
+  .services-section {
+    background: #fff;
+  }
+
+  .service-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    border-top: 1px solid #eae5db;
+    border-left: 1px solid #eae5db;
+  }
+
+  .service-card {
+    min-height: 220px;
+    padding: 30px;
+    border-right: 1px solid #eae5db;
+    border-bottom: 1px solid #eae5db;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    color: inherit;
+    text-decoration: none;
+    transition: .45s cubic-bezier(.2,.8,.2,1);
+  }
+
+  .service-card:hover {
+    background: #f8f5ee;
+    transform: translateY(-6px);
+    box-shadow: 0 16px 35px rgba(30,25,15,.06);
+    z-index: 1;
+  }
+
+  .service-card h3 {
+    font-size: 19px;
+    font-weight: 500;
+    margin: 0 0 12px;
+  }
+
+  .service-card p {
+    color: #858078;
+    font-size: 12px;
+    margin: 0;
+  }
+
+  .service-arrow {
+    align-self: flex-end;
+    font-size: 21px;
+    color: #ae9059;
+    transition: .3s;
+  }
+
+  .service-card:hover .service-arrow {
+    transform: translate(5px,-5px);
+  }
+
+  .section-bottom-link {
+    margin-top: 38px;
+    text-align: center;
+  }
+
+  /* FEATURE BAND */
+  .feature-band {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 530px;
+    background: #292721;
+    color: white;
+  }
+
+  .feature-image {
+    background-image:
+      linear-gradient(rgba(0,0,0,.12),rgba(0,0,0,.12)),
+      url('/images/elevater6.webp');
+    background-size: cover;
+    background-position: center;
+  }
+
+  .feature-content {
+    align-self: center;
+    padding: 80px 12%;
+  }
+
+  .feature-content h2 {
+    font-size: clamp(35px,4vw,53px);
+  }
+
+  .feature-content h2 em {
+    color: #d2b57e;
+  }
+
+  .feature-content p {
+    color: rgba(255,255,255,.7);
+    font-size: 14px;
+    max-width: 450px;
+    margin: 25px 0 35px;
+  }
+
+  /* PROCESS */
+  .process-section {
+    background: #faf9f6;
+  }
+
+  .process-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+  }
+
+  .process-card {
+    background: white;
+    border: 1px solid #eee7dc;
+    padding: 30px;
+    transition: .4s;
+  }
+
+  .process-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 40px rgba(0,0,0,.06);
+  }
+
+  .process-number,
+  .reason-number {
+    display: block;
+    color: #b3945b;
+    font-family: Georgia, serif;
+    font-size: 13px;
+    letter-spacing: 1px;
+    margin-bottom: 18px;
+  }
+
+  .process-line {
+    width: 45px;
+    height: 2px;
+    background: #b3945b;
+    margin-bottom: 28px;
+    transition: width .4s ease;
+  }
+
+  .process-card:hover .process-line {
+    width: 85px;
+  }
+
+  .process-card h3 {
+    font-size: 17px;
+    font-weight: 500;
+  }
+
+  .process-card p {
+    font-size: 12px;
+    color: #858078;
+  }
+
+  /* REASONS */
+  .reason-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 35px;
+  }
+
+  .reason-grid article {
+    border-top: 1px solid #d9c7a4;
+    padding-top: 25px;
+  }
+
+  .reason-grid h3 {
+    font-size: 19px;
+    font-weight: 500;
+    margin-top: 0;
+  }
+
+  .reason-grid p {
+    color: #858078;
+    font-size: 13px;
+  }
+
+  /* GALLERY */
+  .gallery-preview {
+    background: #f8f6f1;
+  }
+
+  .preview-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr;
+    gap: 18px;
+    height: 340px;
+  }
+
+  .preview-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .7s ease, filter .5s ease;
+  }
+
+  .preview-grid img:hover {
+    transform: scale(1.025);
+    filter: brightness(.9);
+  }
+
+  .disclaimer {
+    font-size: 11px;
+    color: #969087;
+    margin-top: 20px;
+  }
+
+  /* =====================================
+     TESTIMONIALS - PREMIUM LIGHT THEME
+  ===================================== */
+
+  .testimonials-section {
+    position: relative;
+    padding: 110px 0 95px;
+    background: #f8f6f1;
+    color: #302d27;
+    overflow: hidden;
+  }
+
+  .testimonials-heading {
+    max-width: 750px;
+    margin: 0 auto 65px;
+    text-align: center;
+  }
+
+  .testimonials-heading .eyebrow {
+    margin-bottom: 22px;
+  }
+
+  .testimonials-heading h2 {
+    font-size: clamp(36px, 4.5vw, 57px);
+    line-height: 1.15;
+    font-weight: 400;
+    letter-spacing: -1.8px;
+    margin: 0 0 22px;
+    color: #302d27;
+  }
+
+  .testimonials-heading h2 em {
+    color: #ad8b52;
+    font-family: Georgia, serif;
+    font-weight: 400;
+  }
+
+  .testimonials-heading > p {
+    max-width: 570px;
+    margin: 0 auto;
+    font-size: 14px;
+    line-height: 1.9;
+    color: #817b71;
+  }
+
+  /* CARDS */
+
+  .testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+  }
+
+  .testimonial-card {
+    position: relative;
+    min-height: 355px;
+    padding: 32px 30px 27px;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border: 1px solid #eae5db;
+    transition:
+      transform .5s cubic-bezier(.2,.8,.2,1),
+      box-shadow .5s ease,
+      border-color .4s ease;
+  }
+
+  .testimonial-card:hover {
+    transform: translateY(-8px);
+    border-color: #d3bd96;
+    box-shadow: 0 22px 50px rgba(55, 45, 28, .075);
+  }
+
+  .testimonial-card-featured {
+    background: #eee9df;
+    border-color: #e4dac8;
+  }
+
+  .testimonial-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 22px;
+    border-bottom: 1px solid #eae5db;
+  }
+
+  .testimonial-card-featured .testimonial-card-top {
+    border-color: #dcd1be;
+  }
+
+  .testimonial-index {
+    font-size: 9px;
+    letter-spacing: 1.8px;
+    font-weight: 600;
+    color: #9b855e;
+  }
+
+  .testimonial-symbol {
+    font-family: Georgia, serif;
+    font-size: 55px;
+    line-height: .7;
+    color: #b3945b;
+  }
+
+  .testimonial-card h3 {
+    max-width: 290px;
+    font-size: clamp(23px, 2.1vw, 28px);
+    line-height: 1.35;
+    letter-spacing: -.7px;
+    font-weight: 400;
+    color: #302d27;
+    margin: 32px 0 17px;
+  }
+
+  .testimonial-card h3 em {
+    font-family: Georgia, serif;
+    font-weight: 400;
+    color: #ad8b52;
+  }
+
+  .testimonial-card > p {
+    color: #817b71;
+    font-size: 13px;
+    line-height: 1.9;
+    margin: 0 0 28px;
+  }
+
+  .testimonial-card-bottom {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    border-top: 1px solid #eae5db;
+    padding-top: 20px;
+    margin-top: auto;
+  }
+
+  .testimonial-card-featured .testimonial-card-bottom {
+    border-color: #dcd1be;
+  }
+
+  .commitment-icon {
+    width: 39px;
+    height: 39px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    background: #f2eee6;
+    color: #a58750;
+    font-family: Georgia, serif;
+    font-size: 13px;
+  }
+
+  .testimonial-card-featured .commitment-icon {
+    background: #fff;
+  }
+
+  .testimonial-card-bottom strong,
+  .testimonial-card-bottom small {
+    display: block;
+  }
+
+  .testimonial-card-bottom strong {
+    color: #39352e;
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  .testimonial-card-bottom small {
+    color: #918a7e;
+    font-size: 10px;
+    margin-top: 5px;
+  }
+
+  /* CLOSING */
+
+  .testimonial-closing {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    border-top: 1px solid #e3ddd1;
+    margin-top: 65px;
+    padding-top: 30px;
+  }
+
+  .closing-label {
+    display: block;
+    color: #a1834e;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 1.8px;
+    margin-bottom: 10px;
+  }
+
+  .testimonial-closing h3 {
+    font-family: Georgia, serif;
+    font-weight: 400;
+    font-size: 24px;
+    color: #38342d;
+    margin: 0;
+  }
+
+  .testimonial-contact {
+    display: inline-flex;
+    align-items: center;
+    gap: 22px;
+    color: #9e7d46;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px solid #cbb995;
+    padding-bottom: 10px;
+    white-space: nowrap;
+    transition: .35s ease;
+  }
+
+  .testimonial-contact:hover {
+    gap: 32px;
+    color: #735a32;
+  }
+
+  /* FAQ */
+  .faq-section {
+    background: #f8f6f1;
+    padding: 115px 0 100px;
+    overflow: hidden;
+  }
+
+  .faq-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 50px;
+    margin-bottom: 65px;
+  }
+
+  .faq-heading {
+    max-width: 650px;
+  }
+
+  .faq-heading h2 {
+    font-size: clamp(45px, 5.5vw, 70px);
+    line-height: 1.05;
+    letter-spacing: -2.5px;
+    margin-bottom: 25px;
+  }
+
+  .faq-heading h2 em {
+    color: #b3945b;
+    font-family: Georgia, serif;
+    font-weight: 400;
+  }
+
+  .faq-heading > p {
+    max-width: 420px;
+    color: #77736c;
+    font-size: 14px;
+    line-height: 1.9;
+  }
+
+  .faq-contact-link {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 9px;
+    margin-top: 22px;
+    text-decoration: none;
+    color: #817b70;
+    font-size: 12px;
+  }
+
+  .faq-contact-link span {
+    color: #a1834e;
+    font-size: 14px;
+    font-weight: 600;
+    border-bottom: 1px solid #c9b48e;
+    padding-bottom: 8px;
+    width: fit-content;
+  }
+
+  .faq-side-note {
+    padding-bottom: 10px;
+  }
+
+  .faq-side-note p {
+    color: #918979;
+    font-size: 9px;
+    letter-spacing: 2px;
+    line-height: 1.9;
+    text-align: right;
+  }
+
+  .faq-list {
+    width: 100%;
+    border-top: 1px solid #dcd5c8;
+  }
+
+  .faq-item {
+    border-bottom: 1px solid #ded8cd;
+    transition: background .4s ease;
+  }
+
+  .faq-item summary {
+    min-height: 95px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    cursor: pointer;
+    list-style: none;
+    padding: 20px 8px;
+  }
+
+  .faq-item summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq-question {
+    font-size: clamp(16px, 2vw, 21px);
+    font-weight: 400;
+    color: #302d27;
+    transition: color .3s ease;
+  }
+
+  .faq-toggle {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #d8c9ab;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    position: relative;
+    transition: .4s ease;
+  }
+
+  .faq-toggle span {
+    position: absolute;
+    width: 13px;
+    height: 1px;
+    background: #a1834e;
+    transition: transform .4s ease;
+  }
+
+  .faq-toggle span:last-child {
+    transform: rotate(90deg);
+  }
+
+  .faq-item[open] {
+    background: rgba(179,148,91,.055);
+  }
+
+  .faq-item[open] .faq-toggle {
+    background: #b3945b;
+    border-color: #b3945b;
+    transform: rotate(180deg);
+  }
+
+  .faq-item[open] .faq-toggle span {
+    background: white;
+  }
+
+  .faq-item[open] .faq-toggle span:last-child {
+    transform: rotate(0);
+  }
+
+  .faq-item[open] .faq-question {
+    color: #a1834e;
+  }
+
+  .faq-answer p {
+    max-width: 650px;
+    margin: 0 75px 28px 8px;
+    color: #77736c;
+    font-size: 14px;
+    line-height: 1.9;
+    animation: faqReveal .4s ease both;
+  }
+
+  .faq-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #dcd5c8;
+    margin-top: 35px;
+    padding-top: 25px;
+  }
+
+  .faq-bottom span {
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    color: #938a7c;
+  }
+
+  .faq-bottom a {
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: #a1834e;
+    text-decoration: none;
+    font-weight: 600;
+    transition: .3s;
+  }
+
+  .faq-bottom a:hover {
+    letter-spacing: 2px;
+  }
+
+  @keyframes faqReveal {
+    from {
+      opacity: 0;
+      transform: translateY(-8px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* SCROLL REVEAL */
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity .8s ease, transform .8s ease;
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* TABLET */
+  @media(max-width: 1000px) {
+    .intro-grid {
+      gap: 45px;
+    }
+
+    .process-grid,
+    .reason-grid {
+      grid-template-columns: repeat(2,1fr);
+    }
+
+    .trust-inner {
+      flex-wrap: wrap;
+    }
+
+    .testimonial-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .testimonial-card:last-child {
+      grid-column: span 2;
+      min-height: 300px;
+    }
+  }
+
+  /* MOBILE */
+  @media(max-width: 750px) {
+    .section {
+      padding: 75px 0;
+    }
+
+    .container {
+      width: calc(100% - 36px);
+    }
+
+    .home-hero {
+      height: 700px;
+      min-height: 600px;
+    }
+
+    .hero-inner h1 {
+      font-size: clamp(49px,10vw,70px);
+      letter-spacing: -2px;
+    }
+
+    .hero-inner p {
+      font-size: 13px;
+      max-width: 380px;
+    }
+
+    .slider-controls {
+      bottom: 22px;
+    }
+
+    .trust-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .trust-inner span {
+      font-size: 9px;
+    }
+
+    .intro-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .intro-visual,
+    .intro-visual img {
+      min-height: 390px;
+      height: 390px;
+    }
+
+    .image-note {
+      right: 0;
+      bottom: -15px;
+    }
+
+    .intro-copy {
+      margin-top: 25px;
+    }
+
+    .section-heading {
+      display: block;
+      margin-bottom: 35px;
+    }
+
+    .section-heading > p {
+      margin-top: 20px;
+    }
+
+    .stats-grid {
+      grid-template-columns: 1fr 1fr;
+      row-gap: 25px;
+    }
+
+    .stats-grid > div {
+      padding: 10px 15px;
+    }
+
+    .stats-grid > div:nth-child(2) {
+      border-right: none;
+    }
+
+    .service-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .service-card {
+      min-height: 210px;
+      padding: 20px;
+    }
+
+    .feature-band {
+      grid-template-columns: 1fr;
+    }
+
+    .feature-image {
+      min-height: 300px;
+    }
+
+    .feature-content {
+      padding: 55px 25px;
+    }
+
+    .preview-grid {
+      height: auto;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .preview-grid img {
+      height: 230px;
+    }
+
+    .preview-grid img:first-child {
+      grid-column: span 2;
+      height: 270px;
+    }
+
+    /* TESTIMONIALS MOBILE */
+
+    .testimonials-section {
+      padding: 75px 0 65px;
+    }
+
+    .testimonials-heading {
+      margin-bottom: 40px;
+    }
+
+    .testimonials-heading h2 {
+      font-size: clamp(34px, 8vw, 45px);
+      letter-spacing: -1px;
+    }
+
+    .testimonials-heading > p {
+      font-size: 13px;
+    }
+
+    .testimonial-grid {
+      grid-template-columns: 1fr;
+      gap: 15px;
+    }
+
+    .testimonial-card,
+    .testimonial-card:last-child {
+      grid-column: auto;
+      min-height: 310px;
+      padding: 27px 24px;
+    }
+
+    .testimonial-card h3 {
+      font-size: 26px;
+      margin-top: 27px;
+    }
+
+    .testimonial-closing {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-top: 40px;
+      gap: 22px;
+    }
+
+    .testimonial-closing h3 {
+      font-size: 21px;
+    }
+
+    .faq-top {
+      margin-bottom: 45px;
+    }
+
+    .faq-side-note {
+      display: none;
+    }
+
+    .faq-item summary {
+      min-height: 85px;
+    }
+
+    .faq-answer p {
+      margin: 0 45px 25px 8px;
+      font-size: 13px;
+    }
+  }
+
+  @media(max-width: 480px) {
+    .hero-actions {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .hero-actions .button {
+      min-width: 205px;
+    }
+
+    .slide-dots {
+      gap: 5px;
+    }
+
+    .slide-dots button {
+      width: 15px;
+    }
+
+    .slide-dots button.is-active {
+      width: 28px;
+    }
+
+    .slide-arrows button {
+      height: 36px;
+      width: 36px;
+    }
+
+    .service-grid,
+    .process-grid,
+    .reason-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .service-card {
+      min-height: 175px;
+    }
+
+    .preview-grid img {
+      height: 170px;
+    }
+
+    .preview-grid img:first-child {
+      height: 210px;
+    }
+
+    .testimonials-heading h2 {
+      font-size: 35px;
+    }
+
+    .testimonial-card,
+    .testimonial-card:last-child {
+      min-height: 300px;
+      padding: 24px 21px;
+    }
+
+    .testimonial-card h3 {
+      font-size: 25px;
+    }
+
+    .testimonial-card > p {
+      font-size: 12px;
+    }
+
+    .faq-section {
+      padding: 70px 0;
+    }
+
+    .faq-heading h2 {
+      font-size: 45px;
+      line-height: 1.1;
+    }
+
+    .faq-heading > p {
+      font-size: 13px;
+    }
+
+    .faq-item summary {
+      min-height: 80px;
+      gap: 12px;
+    }
+
+    .faq-question {
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .faq-toggle {
+      width: 34px;
+      height: 34px;
+    }
+
+    .faq-answer p {
+      margin: 0 35px 23px 8px;
+      font-size: 12px;
+      line-height: 1.8;
+    }
+
+    .faq-bottom {
+      gap: 15px;
+    }
+
+    .faq-bottom span {
+      font-size: 8px;
+      letter-spacing: .8px;
+    }
+
+    .faq-bottom a {
+      font-size: 9px;
+      white-space: nowrap;
+    }
+
+    .image-note {
+      min-width: 190px;
+      padding: 22px;
+    }
+
+    .trust-inner {
+      gap: 15px;
+    }
+  }
+
+  /* REDUCED MOTION */
+  @media(prefers-reduced-motion: reduce) {
+    :global(html) {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: .01ms !important;
+      transition-duration: .01ms !important;
+    }
+
+    .reveal {
+      opacity: 1;
+      transform: none;
+    }
+  }
+</style>
+
+</BaseLayout>

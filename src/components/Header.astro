@@ -1,0 +1,550 @@
+
+---
+const current = Astro.url.pathname;
+
+const links = [
+  { href: '/', label: 'Home' },
+  { href: '/about/', label: 'About' },
+  { href: '/services/', label: 'Services' },
+  { href: '/gallery/', label: 'Gallery' },
+  { href: '/contact/', label: 'Contact' }
+];
+---
+
+<!-- DARK INFINITE TOP INFORMATION BAR -->
+<div class="topline">
+  <div class="topline-marquee" data-marquee>
+    <div class="topline-track" data-marquee-track>
+
+      <!-- FIRST CONTENT GROUP -->
+      <div class="topline-group" data-marquee-content>
+
+        <div class="topline-brand">
+          <span class="topline-brand-dot"></span>
+          TRAUZAN ELEVATOR
+        </div>
+
+        <span class="topline-separator"></span>
+
+        <span class="topline-tagline">
+          Vertical Mobility · Engineered for Everyday Life
+        </span>
+
+        <span class="topline-separator"></span>
+
+        <a href="tel:+919911806270" class="top-contact-link">
+          <span class="contact-symbol">☎</span>
+          +91 99118 06270
+        </a>
+
+        <span class="topline-separator"></span>
+
+        <a href="mailto:Trauzanelevator@gmail.com" class="top-contact-link">
+          <span class="contact-symbol">✉</span>
+          Trauzanelevator@gmail.com
+        </a>
+
+        <span class="topline-separator"></span>
+
+        <a
+          href="https://www.trauzanelevator.co.in"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="top-contact-link"
+        >
+          www.trauzanelevator.co.in
+          <span class="website-arrow">↗</span>
+        </a>
+
+        <span class="topline-separator"></span>
+
+        <span class="topline-tagline">
+          Safety · Quality · Reliability
+        </span>
+
+        <span class="topline-separator"></span>
+
+      </div>
+
+      <!-- DUPLICATE GROUP FOR INFINITE LOOP -->
+      <div class="topline-group" aria-hidden="true" inert>
+
+        <div class="topline-brand">
+          <span class="topline-brand-dot"></span>
+          TRAUZAN ELEVATOR
+        </div>
+
+        <span class="topline-separator"></span>
+
+        <span class="topline-tagline">
+          Vertical Mobility · Engineered for Everyday Life
+        </span>
+
+        <span class="topline-separator"></span>
+
+        <a href="tel:+919911806270" class="top-contact-link" tabindex="-1">
+          <span class="contact-symbol">☎</span>
+          +91 99118 06270
+        </a>
+
+        <span class="topline-separator"></span>
+
+        <a href="mailto:Trauzanelevator@gmail.com" class="top-contact-link" tabindex="-1">
+          <span class="contact-symbol">✉</span>
+          Trauzanelevator@gmail.com
+        </a>
+
+        <span class="topline-separator"></span>
+
+        <a
+          href="https://www.trauzanelevator.co.in"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="top-contact-link"
+          tabindex="-1"
+        >
+          www.trauzanelevator.co.in
+          <span class="website-arrow">↗</span>
+        </a>
+
+        <span class="topline-separator"></span>
+
+        <span class="topline-tagline">
+          Safety · Quality · Reliability
+        </span>
+
+        <span class="topline-separator"></span>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- OFFICE ADDRESS -->
+<div class="address-strip">
+  <div class="container address-inner">
+
+    <div class="address-content">
+      <span class="address-label">OFFICE ADDRESS</span>
+
+      <span class="address-text">
+        Plot No. 1-A, 5GF, Ground Floor, Khasra No. 590,
+        Near N.D. Model Public School, Sabhapur St. 6,
+        Milan Garden, Chaman Vihar, Gali No. 8, Block A,
+        Sabhapur Extension, North East Delhi – 110094, India.
+      </span>
+    </div>
+
+    <a href="mailto:Info@trauzanelevator.co.in" class="secondary-email">
+      <span class="contact-symbol">✉</span>
+      Info@trauzanelevator.co.in
+    </a>
+
+  </div>
+</div>
+
+
+<!-- MAIN NAVBAR -->
+<header class="site-header" data-header>
+  <div class="container nav-wrap">
+
+    <a class="brand" href="/" aria-label="Trauzan Elevator home">
+      <img
+        class="brand-logo"
+        src="/images/trauzan-logo.webp"
+        alt="Trauzan Elevator — All Lift Elevator & Escalator Services"
+        width="220"
+        height="110"
+      />
+    </a>
+
+    <button
+      class="menu-toggle"
+      aria-label="Open navigation"
+      aria-expanded="false"
+      data-menu-toggle
+    >
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="main-nav" data-nav aria-label="Main navigation">
+      {links.map(link => (
+        <a
+          href={link.href}
+          class:list={{
+            active: current === link.href ||
+            (link.href !== '/' && current.startsWith(link.href))
+          }}
+        >
+          {link.label}
+        </a>
+      ))}
+
+      <a class="nav-cta" href="/contact/">
+        Get in touch <span>↗</span>
+      </a>
+    </nav>
+
+  </div>
+</header>
+
+
+<style>
+
+/* ==========================================
+   DARK TOP INFORMATION BAR
+========================================== */
+
+.topline {
+  width: 100%;
+  height: 43px;
+  background: #002556;
+  color: #ffffff;
+  position: relative;
+  z-index: 1002;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+
+.topline-marquee {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.topline-track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  height: 100%;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+}
+
+.topline-group {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  width: max-content;
+  height: 100%;
+  gap: 27px;
+  padding-right: 27px;
+  white-space: nowrap;
+}
+
+.topline-brand {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.topline-brand-dot {
+  width: 7px;
+  height: 7px;
+  background: #e4b85f;
+  border-radius: 50%;
+  flex-shrink: 0;
+  box-shadow: 0 0 10px rgba(228,184,95,0.5);
+}
+
+.topline-tagline {
+  font-size: 10px;
+  color: rgba(255,255,255,0.68);
+  letter-spacing: .45px;
+}
+
+.topline-separator {
+  width: 1px;
+  height: 14px;
+  background: rgba(255,255,255,0.25);
+  flex-shrink: 0;
+}
+
+.top-contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 10px;
+  font-weight: 500;
+  transition: color .25s ease;
+}
+
+.top-contact-link:hover {
+  color: #e4b85f;
+}
+
+.contact-symbol,
+.website-arrow {
+  color: #e4b85f;
+  font-size: 13px;
+}
+
+.top-contact-link:hover .contact-symbol {
+  color: #ffffff;
+}
+
+
+/* ==========================================
+   ADDRESS STRIP
+========================================== */
+
+.address-strip {
+  width: 100%;
+  background: #ffffff;
+  border-bottom: 1px solid #ecebe7;
+  position: relative;
+}
+
+.address-inner {
+  min-height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+.address-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.address-label {
+  color: #a27b3e;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .8px;
+  white-space: nowrap;
+}
+
+.address-text {
+  color: #777c82;
+  font-size: 9px;
+  line-height: 1.5;
+}
+
+.secondary-email {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #424b56;
+  font-size: 9px;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color .25s ease;
+}
+
+.secondary-email:hover {
+  color: #ae8642;
+}
+
+
+/* ==========================================
+   MAIN NAVBAR
+========================================== */
+
+.site-header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background: #ffffff;
+  isolation: isolate;
+}
+
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 1100px) {
+
+  .address-inner {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .address-text {
+    font-size: 8px;
+  }
+
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 768px) {
+
+  .topline {
+    height: 40px;
+  }
+
+  .topline-group {
+    gap: 20px;
+    padding-right: 20px;
+  }
+
+  .topline-brand {
+    font-size: 9px;
+  }
+
+  .topline-tagline,
+  .top-contact-link {
+    font-size: 9px;
+  }
+
+  .address-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+  }
+
+  .address-content {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .address-text {
+    font-size: 9px;
+  }
+
+  .secondary-email {
+    font-size: 9px;
+  }
+
+}
+
+@media (max-width: 380px) {
+
+  .topline {
+    height: 38px;
+  }
+
+  .topline-group {
+    gap: 16px;
+    padding-right: 16px;
+  }
+
+}
+
+</style>
+
+
+<script>
+/* ==========================================
+   JAVASCRIPT INFINITE MARQUEE
+========================================== */
+
+const marquee = document.querySelector('[data-marquee]');
+const track = document.querySelector('[data-marquee-track]');
+const content = document.querySelector('[data-marquee-content]');
+
+if (
+  marquee instanceof HTMLElement &&
+  track instanceof HTMLElement &&
+  content instanceof HTMLElement
+) {
+  let position = 0;
+  let previousTime = 0;
+  let contentWidth = 0;
+  let animationFrame = 0;
+  let isPaused = false;
+
+  const speed = 65; // pixels per second
+
+  const measureContent = () => {
+    contentWidth = content.getBoundingClientRect().width;
+
+    if (contentWidth > 0) {
+      position = position % contentWidth;
+      track.style.transform = `translate3d(${-position}px, 0, 0)`;
+    }
+  };
+
+  const animate = (time) => {
+    if (!previousTime) previousTime = time;
+
+    const delta = Math.min((time - previousTime) / 1000, 0.05);
+    previousTime = time;
+
+    if (!isPaused && contentWidth > 0) {
+      position += speed * delta;
+
+      if (position >= contentWidth) {
+        position -= contentWidth;
+      }
+
+      track.style.transform = `translate3d(${-position}px, 0, 0)`;
+    }
+
+    animationFrame = requestAnimationFrame(animate);
+  };
+
+  marquee.addEventListener('mouseenter', () => {
+    isPaused = true;
+  });
+
+  marquee.addEventListener('mouseleave', () => {
+    isPaused = false;
+    previousTime = 0;
+  });
+
+  window.addEventListener('resize', measureContent);
+
+  measureContent();
+  animationFrame = requestAnimationFrame(animate);
+
+  document.addEventListener('astro:before-swap', () => {
+    cancelAnimationFrame(animationFrame);
+  }, { once: true });
+}
+
+
+/* ==========================================
+   MOBILE NAVIGATION
+========================================== */
+
+const menuToggle = document.querySelector('[data-menu-toggle]');
+const nav = document.querySelector('[data-nav]');
+
+if (menuToggle && nav) {
+  menuToggle.addEventListener('click', () => {
+    const isOpen = nav.classList.toggle('is-open');
+
+    menuToggle.setAttribute('aria-expanded', String(isOpen));
+    menuToggle.setAttribute(
+      'aria-label',
+      isOpen ? 'Close navigation' : 'Open navigation'
+    );
+  });
+
+  nav.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('is-open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.setAttribute('aria-label', 'Open navigation');
+    });
+  });
+}
+</script>

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.trauzanelevator.co.in/sitemap.xml

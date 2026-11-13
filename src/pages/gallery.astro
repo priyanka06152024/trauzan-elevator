@@ -1,0 +1,89 @@
+
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+
+const photos = [
+  ['Modern elevator installations', '/images/elevater10.png'],
+  ['Premium elevator interiors', '/images/elevater11.png'],
+  ['Contemporary building access', '/images/elevater9.png'],
+  ['Elegant interior finishes', '/images/elevater13.png'],
+  ['Thoughtfully designed spaces', '/images/elevater6.webp'],
+  ['Modern spaces and mobility', '/images/elevater1.webp'],
+];
+---
+
+<BaseLayout
+  title="Gallery | Trauzan Elevator"
+  description="Explore Trauzan Elevator's visual gallery featuring elevator solutions, modern installations, premium cabin designs and vertical mobility."
+>
+  <PageHero
+    eyebrow="OUR WORK & SOLUTIONS"
+    title="Designed to move."
+    accent="Built to last."
+    description="Discover the world of vertical mobility through thoughtful design, modern elevator solutions and spaces connected with purpose."
+    image="/images/elevater5.webp"
+  />
+
+  <section class="section gallery-page-section">
+    <div class="container">
+
+      <div class="gallery-intro">
+        <div>
+          <span class="eyebrow">THE TRAUZAN COLLECTION</span>
+          <h2>
+            Elevating spaces.<br />
+            <em>Connecting lives.</em>
+          </h2>
+        </div>
+
+        <p>
+          Explore the world of Trauzan Elevator, where modern elevator
+          solutions meet thoughtful design, dependable engineering and
+          everyday convenience. Every detail reflects our commitment
+          to making vertical movement smoother, safer and more seamless.
+        </p>
+      </div>
+
+      <div class="gallery-grid">
+        {photos.map(([caption, img], i) => (
+          <button
+            class="gallery-item"
+            data-gallery-image={img}
+            data-gallery-caption={caption}
+            aria-label={`Open image: ${caption}`}
+          >
+            <img
+              src={img}
+              alt={caption}
+              loading="lazy"
+            />
+
+            <span class="gallery-caption">
+              <small>
+                {String(i + 1).padStart(2, '0')} / TRAUZAN ELEVATOR
+              </small>
+              <strong>{caption}</strong>
+            </span>
+
+            <span class="gallery-expand">↗</span>
+          </button>
+        ))}
+      </div>
+
+    </div>
+  </section>
+
+  <div class="lightbox" data-lightbox aria-hidden="true">
+    <button
+      class="lightbox-close"
+      data-lightbox-close
+      aria-label="Close image"
+    >
+      ×
+    </button>
+
+    <img data-lightbox-img src="" alt="" />
+    <p data-lightbox-caption></p>
+  </div>
+</BaseLayout>

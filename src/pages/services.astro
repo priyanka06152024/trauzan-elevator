@@ -1,0 +1,918 @@
+
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+
+const items = [
+  ['01', 'Lift & Elevator Installation', 'From planning to installation, we help identify and implement elevator solutions suited to building layout, traffic needs and intended use.', '/images/elevater2.webp', 'INSTALLATION'],
+  ['02', 'Elevator Repair & Maintenance', 'Service support for elevator issues, routine checks and maintenance requirements, with a focus on dependable operation.', '/images/elevater8.png', 'MAINTENANCE'],
+  ['03', 'Lift Modernization', 'Modernization options to refresh existing lift systems, improve the user experience and support continued performance.', '/images/elevater11.png', 'MODERNIZATION'],
+  ['04', 'Passenger & Goods Lifts', 'Solutions for residential, commercial and industrial environments, including passenger and goods transportation needs.', '/images/elevater9.png', 'LIFT SYSTEMS'],
+  ['05', 'Glass Elevators', 'Contemporary glass elevator solutions designed to complement modern spaces and architectural requirements.', '/images/elevater10.png', 'ARCHITECTURAL'],
+  ['06', 'Escalator Installation & Services', 'Installation and service support for escalator systems in commercial and public-use environments.', '/images/elevater13.png', 'ESCALATORS'],
+  ['07', 'Annual Maintenance Contracts', 'Planned AMC support to help customers schedule maintenance and care for their lift and elevator systems.', '/images/elevater12.png', 'AMC SUPPORT'],
+  ['08', 'Inspection & Troubleshooting', 'Assessment and troubleshooting support to help identify operational concerns and plan appropriate next steps.', '/images/elevater14.png', 'TECHNICAL SUPPORT'],
+];
+
+const featured = items[0];
+const services = items.slice(1);
+---
+
+<BaseLayout
+  title="Elevator & Lift Services in Delhi | Trauzan Elevator"
+  description="Explore Trauzan Elevator services: installation, repair, maintenance, modernization, glass lifts, goods lifts, escalators and AMC."
+>
+  <PageHero
+    eyebrow="OUR CAPABILITIES"
+    title="Complete solutions."
+    accent="Care at every step."
+    description="A considered range of lift, elevator and escalator services for buildings of every kind."
+    image="/images/elevater13.png"
+  />
+
+  <!-- INTRO -->
+  <section class="editorial-intro">
+    <div class="container">
+      <div class="intro-topline" data-reveal>
+        <span class="eyebrow">01 — OUR EXPERTISE</span>
+        <span class="intro-caption">ENGINEERING MOVEMENT SINCE DAY ONE</span>
+      </div>
+
+      <div class="intro-main" data-reveal>
+        <h2>
+          Elevating<br />
+          <span>the way</span> we move.
+        </h2>
+
+        <div class="intro-description">
+          <span class="gold-mark"></span>
+          <p>
+            Thoughtfully selected solutions for modern buildings.
+            From the first installation to ongoing care, we help
+            keep your world moving.
+          </p>
+        </div>
+      </div>
+
+      <div class="intro-bottom">
+        <span>TRAUZAN ELEVATOR</span>
+        <span>SCROLL TO DISCOVER ↓</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED SERVICE -->
+  <section class="featured-section">
+    <div class="container">
+
+      <div class="section-kicker" data-reveal>
+        <span class="eyebrow">02 — SIGNATURE SERVICES</span>
+        <span>01 / 08</span>
+      </div>
+
+      <a
+        href={`/contact/?service=${encodeURIComponent(featured[1])}`}
+        class="featured-service"
+        data-reveal
+      >
+        <div class="featured-image">
+          <img src={featured[3]} alt={featured[1]} loading="lazy" />
+          <div class="featured-image-shade"></div>
+
+          <span class="featured-image-label">FEATURED SOLUTION / 01</span>
+
+          <span class="featured-round-arrow">↗</span>
+
+          <div class="featured-image-bottom">
+            <span>ENGINEERED FOR EVERY LEVEL</span>
+            <span>01 — 08</span>
+          </div>
+        </div>
+
+        <div class="featured-content">
+          <div class="featured-content-top">
+            <span class="eyebrow">01 / {featured[4]}</span>
+            <span class="featured-star">✳</span>
+          </div>
+
+          <h2>
+            {featured[1]}
+          </h2>
+
+          <p>{featured[2]}</p>
+
+          <div class="featured-link">
+            <span>DISCOVER THIS SERVICE</span>
+            <span class="featured-link-line"></span>
+            <span>↗</span>
+          </div>
+
+          <span class="featured-watermark">01</span>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- OTHER SERVICES -->
+  <section class="editorial-services">
+    <div class="container">
+
+      <div class="services-heading" data-reveal>
+        <div>
+          <span class="eyebrow">03 — WHAT WE OFFER</span>
+          <h2>
+            Designed around<br />
+            <em>your needs.</em>
+          </h2>
+        </div>
+
+        <p>
+          Every project is different. Explore our range of
+          specialized solutions, built around the requirements
+          of your space.
+        </p>
+      </div>
+
+      <div class="editorial-list">
+        {services.map((item, index) => (
+          <a
+            href={`/contact/?service=${encodeURIComponent(item[1])}`}
+            class={`editorial-service ${index % 2 !== 0 ? 'reverse' : ''}`}
+            data-reveal
+            style={`--index:${index};`}
+          >
+            <div class="editorial-service-visual">
+              <img src={item[3]} alt={item[1]} loading="lazy" />
+
+              <div class="visual-overlay"></div>
+
+              <span class="visual-number">{item[0]}</span>
+
+              <span class="visual-category">{item[4]}</span>
+
+              <span class="visual-arrow">↗</span>
+            </div>
+
+            <div class="editorial-service-info">
+              <div class="service-info-top">
+                <span class="eyebrow">SERVICE / {item[0]}</span>
+                <span class="service-info-icon">✳</span>
+              </div>
+
+              <div class="service-info-middle">
+                <h3>{item[1]}</h3>
+                <p>{item[2]}</p>
+              </div>
+
+              <div class="service-info-bottom">
+                <span>EXPLORE SERVICE</span>
+                <span class="info-line"></span>
+                <span>↗</span>
+              </div>
+
+              <span class="service-big-number">{item[0]}</span>
+            </div>
+          </a>
+        ))}
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BRAND STATEMENT -->
+  <section class="brand-statement">
+    <div class="container">
+      <div class="statement-top" data-reveal>
+        <span class="eyebrow">04 — THE TRAUZAN APPROACH</span>
+        <span>BEYOND TRANSPORTATION</span>
+      </div>
+
+      <div class="statement-main" data-reveal>
+        <span class="statement-symbol">✳</span>
+        <h2>
+          Every detail matters.<br />
+          <em>Every level counts.</em>
+        </h2>
+      </div>
+
+      <div class="statement-bottom">
+        <p>
+          The right solution starts with understanding
+          your building and what it needs.
+        </p>
+        <span>TRAUZAN ELEVATOR — MOVING FORWARD</span>
+      </div>
+    </div>
+  </section>
+
+  
+  
+
+</BaseLayout>
+
+<style>
+  /* All colors inherit the existing Trauzan theme.
+     Gold uses the existing gold variable where available. */
+
+  .editorial-intro {
+    padding: 125px 0 90px;
+    overflow: hidden;
+  }
+
+  .intro-topline,
+  .intro-bottom,
+  .section-kicker,
+  .statement-top,
+  .cta-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .intro-caption,
+  .intro-bottom,
+  .section-kicker,
+  .statement-top,
+  .cta-footer {
+    font-size: 9px;
+    letter-spacing: 2px;
+    opacity: .65;
+  }
+
+  .intro-main {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 85px 0 95px;
+  }
+
+  .intro-main h2 {
+    font-size: clamp(65px, 10vw, 135px);
+    font-weight: 500;
+    letter-spacing: -.075em;
+    line-height: .85;
+    margin: 0;
+  }
+
+  .intro-main h2 span {
+    opacity: .42;
+  }
+
+  .intro-description {
+    max-width: 300px;
+    padding-bottom: 8px;
+  }
+
+  .gold-mark {
+    width: 42px;
+    height: 3px;
+    background: var(--gold, #c6a36a);
+    display: block;
+    margin-bottom: 22px;
+  }
+
+  .intro-description p {
+    font-size: 14px;
+    line-height: 1.9;
+    opacity: .7;
+    margin: 0;
+  }
+
+  .intro-bottom {
+    padding: 20px 0;
+    border-top: 1px solid currentColor;
+  }
+
+  /* FEATURED */
+
+  .featured-section {
+    padding: 40px 0 130px;
+  }
+
+  .section-kicker {
+    margin-bottom: 25px;
+  }
+
+  .featured-service {
+    display: grid;
+    grid-template-columns: 1.35fr .65fr;
+    min-height: 520px;
+    color: inherit;
+    text-decoration: none;
+    background: rgba(128,128,128,.055);
+    overflow: hidden;
+  }
+
+  .featured-image {
+    position: relative;
+    min-height: 520px;
+    overflow: hidden;
+    background: rgba(128,128,128,.15);
+  }
+
+  .featured-image img,
+  .editorial-service-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 1.1s cubic-bezier(.2,.7,.2,1);
+  }
+
+  .featured-image-shade,
+  .visual-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(0,0,0,.15),
+      transparent 40%,
+      rgba(0,0,0,.5)
+    );
+    pointer-events: none;
+  }
+
+  .featured-image-label {
+    position: absolute;
+    top: 28px;
+    left: 30px;
+    color: white;
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+
+  .featured-round-arrow {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: var(--gold, #c6a36a);
+    color: #171717;
+    font-size: 23px;
+    transition: transform .45s ease;
+  }
+
+  .featured-image-bottom {
+    position: absolute;
+    bottom: 25px;
+    left: 30px;
+    right: 30px;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+
+  .featured-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 48px 38px;
+    overflow: hidden;
+  }
+
+  .featured-content-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .featured-star,
+  .service-info-icon {
+    color: var(--gold, #c6a36a);
+    font-size: 25px;
+    transition: transform .6s ease;
+  }
+
+  .featured-content h2 {
+    position: relative;
+    z-index: 1;
+    font-size: clamp(34px, 4vw, 57px);
+    line-height: 1.05;
+    letter-spacing: -.05em;
+    font-weight: 500;
+    margin: 65px 0 20px;
+  }
+
+  .featured-content > p {
+    font-size: 13px;
+    line-height: 1.9;
+    opacity: .65;
+    max-width: 330px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .featured-link,
+  .service-info-bottom {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+    position: relative;
+    z-index: 1;
+  }
+
+  .featured-link-line,
+  .info-line {
+    height: 1px;
+    width: 35px;
+    background: var(--gold, #c6a36a);
+    transition: width .4s ease;
+  }
+
+  .featured-watermark {
+    position: absolute;
+    bottom: -55px;
+    right: 0;
+    font-size: 200px;
+    line-height: 1;
+    font-weight: 600;
+    opacity: .035;
+    pointer-events: none;
+  }
+
+  /* EDITORIAL SERVICES */
+
+  .editorial-services {
+    padding: 110px 0 140px;
+  }
+
+  .services-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 40px;
+    margin-bottom: 90px;
+  }
+
+  .services-heading h2 {
+    font-size: clamp(55px, 8vw, 100px);
+    line-height: .92;
+    letter-spacing: -.065em;
+    font-weight: 500;
+    margin: 30px 0 0;
+  }
+
+  .services-heading h2 em {
+    font-style: normal;
+    opacity: .42;
+  }
+
+  .services-heading > p {
+    max-width: 330px;
+    font-size: 14px;
+    line-height: 1.9;
+    opacity: .65;
+    margin-bottom: 5px;
+  }
+
+  .editorial-list {
+    border-top: 1px solid rgba(128,128,128,.35);
+  }
+
+  .editorial-service {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 430px;
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(128,128,128,.35);
+    overflow: hidden;
+  }
+
+  .editorial-service.reverse .editorial-service-visual {
+    order: 2;
+  }
+
+  .editorial-service.reverse .editorial-service-info {
+    order: 1;
+  }
+
+  .editorial-service-visual {
+    min-height: 430px;
+    position: relative;
+    overflow: hidden;
+    background: rgba(128,128,128,.12);
+  }
+
+  .editorial-service-visual .visual-overlay {
+    opacity: .8;
+    transition: opacity .5s ease;
+  }
+
+  .visual-number {
+    position: absolute;
+    top: 25px;
+    left: 28px;
+    font-size: 13px;
+    letter-spacing: 2px;
+    color: white;
+  }
+
+  .visual-category {
+    position: absolute;
+    bottom: 27px;
+    left: 28px;
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: white;
+  }
+
+  .visual-arrow {
+    position: absolute;
+    right: 27px;
+    bottom: 20px;
+    color: #181818;
+    background: var(--gold, #c6a36a);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 19px;
+    transform: translateY(10px);
+    opacity: 0;
+    transition: .4s ease;
+  }
+
+  .editorial-service-info {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 42px 55px;
+    overflow: hidden;
+  }
+
+  .service-info-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .service-info-middle {
+    position: relative;
+    z-index: 1;
+    margin: 55px 0;
+  }
+
+  .service-info-middle h3 {
+    max-width: 450px;
+    font-size: clamp(33px, 4vw, 53px);
+    line-height: 1.06;
+    letter-spacing: -.05em;
+    font-weight: 500;
+    margin: 0 0 22px;
+    transition: transform .5s ease;
+  }
+
+  .service-info-middle p {
+    max-width: 380px;
+    font-size: 13px;
+    line-height: 1.9;
+    opacity: .65;
+    margin: 0;
+  }
+
+  .service-info-bottom {
+    gap: 13px;
+  }
+
+  .service-big-number {
+    position: absolute;
+    right: -8px;
+    bottom: -55px;
+    font-size: 200px;
+    line-height: 1;
+    font-weight: 600;
+    opacity: .035;
+    pointer-events: none;
+  }
+
+  /* HOVER EFFECTS */
+
+  @media (hover: hover) {
+    .featured-service:hover .featured-image img,
+    .editorial-service:hover .editorial-service-visual img {
+      transform: scale(1.07);
+    }
+
+    .featured-service:hover .featured-round-arrow {
+      transform: rotate(45deg);
+    }
+
+    .featured-service:hover .featured-star,
+    .editorial-service:hover .service-info-icon {
+      transform: rotate(90deg);
+    }
+
+    .featured-service:hover .featured-link-line,
+    .editorial-service:hover .info-line {
+      width: 65px;
+    }
+
+    .editorial-service:hover .visual-arrow {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .editorial-service:hover .visual-overlay {
+      opacity: 1;
+    }
+
+    .editorial-service:hover .service-info-middle h3 {
+      transform: translateX(8px);
+    }
+  }
+
+  /* BRAND STATEMENT */
+
+  .brand-statement {
+    padding: 80px 0 90px;
+    background: rgba(128,128,128,.055);
+    overflow: hidden;
+  }
+
+  .statement-main {
+    padding: 90px 0;
+    position: relative;
+  }
+
+  .statement-symbol {
+    font-size: 35px;
+    color: var(--gold, #c6a36a);
+  }
+
+  .statement-main h2 {
+    font-size: clamp(48px, 8vw, 105px);
+    font-weight: 500;
+    line-height: .98;
+    letter-spacing: -.06em;
+    margin: 25px 0 0;
+  }
+
+  .statement-main h2 em {
+    font-style: normal;
+    opacity: .42;
+  }
+
+  .statement-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 30px;
+    border-top: 1px solid rgba(128,128,128,.3);
+    padding-top: 25px;
+  }
+
+  .statement-bottom p {
+    max-width: 300px;
+    font-size: 13px;
+    line-height: 1.8;
+    opacity: .65;
+    margin: 0;
+  }
+
+  .statement-bottom span {
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    opacity: .6;
+  }
+
+ 
+
+  /* SCROLL REVEAL */
+
+  [data-reveal] {
+    opacity: 0;
+    transform: translateY(35px);
+    transition:
+      opacity .85s ease,
+      transform .85s cubic-bezier(.2,.7,.2,1);
+    transition-delay: calc(var(--index, 0) * 65ms);
+  }
+
+  [data-reveal].is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* RESPONSIVE */
+
+  @media(max-width: 900px) {
+    .featured-service {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .featured-content {
+      padding: 35px 25px;
+    }
+
+    .editorial-service-info {
+      padding: 35px 30px;
+    }
+
+    .editorial-service,
+    .editorial-service-visual {
+      min-height: 370px;
+    }
+  }
+
+  @media(max-width: 650px) {
+    .editorial-intro {
+      padding: 80px 0 65px;
+    }
+
+    .intro-main {
+      display: block;
+      padding: 65px 0;
+    }
+
+    .intro-main h2 {
+      font-size: clamp(62px, 13vw, 88px);
+    }
+
+    .intro-description {
+      margin: 40px 0 0 auto;
+      max-width: 290px;
+    }
+
+    .intro-caption {
+      font-size: 7px;
+      text-align: right;
+    }
+
+    .intro-bottom,
+    .cta-footer {
+      font-size: 8px;
+      letter-spacing: 1px;
+    }
+
+    .featured-section {
+      padding: 30px 0 75px;
+    }
+
+    .featured-service {
+      grid-template-columns: 1fr;
+    }
+
+    .featured-image {
+      min-height: 350px;
+    }
+
+    .featured-content {
+      min-height: 340px;
+      padding: 30px 25px;
+    }
+
+    .featured-content h2 {
+      font-size: 43px;
+      margin: 45px 0 15px;
+    }
+
+    .editorial-services {
+      padding: 75px 0 85px;
+    }
+
+    .services-heading {
+      display: block;
+      margin-bottom: 50px;
+    }
+
+    .services-heading h2 {
+      font-size: clamp(53px, 11vw, 72px);
+    }
+
+    .services-heading > p {
+      margin-top: 25px;
+    }
+
+    .editorial-service {
+      display: flex;
+      flex-direction: column;
+      min-height: auto;
+    }
+
+    .editorial-service.reverse .editorial-service-visual,
+    .editorial-service.reverse .editorial-service-info {
+      order: initial;
+    }
+
+    .editorial-service-visual {
+      min-height: 300px;
+      height: 300px;
+    }
+
+    .visual-arrow {
+      opacity: 1;
+      transform: none;
+    }
+
+    .editorial-service-info {
+      min-height: 290px;
+      padding: 28px 5px 35px;
+    }
+
+    .service-info-middle {
+      margin: 40px 0;
+    }
+
+    .service-info-middle h3 {
+      font-size: 37px;
+    }
+
+    .service-big-number {
+      font-size: 150px;
+    }
+
+    .brand-statement {
+      padding: 65px 0;
+    }
+
+    .statement-main {
+      padding: 65px 0;
+    }
+
+    .statement-main h2 {
+      font-size: clamp(46px, 10vw, 70px);
+    }
+
+    .statement-bottom {
+      display: block;
+    }
+
+    .statement-bottom span {
+      display: block;
+      margin-top: 25px;
+    }
+
+    .service-cta {
+      padding-top: 75px;
+    }
+
+    .cta-content h2 {
+      font-size: clamp(60px, 12vw, 85px);
+      margin: 50px 0;
+    }
+
+    .cta-bottom {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    .cta-footer {
+      margin-top: 65px;
+    }
+  }
+
+  @media(prefers-reduced-motion: reduce) {
+    [data-reveal] {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+
+    .featured-image img,
+    .editorial-service-visual img {
+      transition: none;
+    }
+  }
+</style>
+
+<script>
+  const revealItems = document.querySelectorAll('[data-reveal]');
+
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver(
+      (entries, obs) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            obs.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.12,
+        rootMargin: '0px 0px -40px 0px',
+      }
+    );
+
+    revealItems.forEach((item) => observer.observe(item));
+  } else {
+    revealItems.forEach((item) => item.classList.add('is-visible'));
+  }
+</script>
