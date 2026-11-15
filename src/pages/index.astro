@@ -327,6 +327,8 @@ const faqs = [
 </section>
 
 <!-- GALLERY -->
+
+<!-- GALLERY -->
 <section class="section gallery-preview reveal">
   <div class="container">
     <div class="section-heading">
@@ -343,27 +345,81 @@ const faqs = [
         Explore gallery <span>↗</span>
       </a>
     </div>
+  </div>
 
-    <div class="preview-grid">
-      <img
-        src="/images/elevater6.webp"
-        alt="Elegant modern interior"
-        loading="lazy"
-      />
+  <div class="gallery-loop">
+    <div class="gallery-track">
 
-      <img
-        src="/images/elevater13.png"
-        alt="Premium contemporary interior"
-        loading="lazy"
-      />
+      <!-- FIRST SET -->
+      <div class="gallery-track-group">
+        <img
+          src="/images/elevater6.webp"
+          alt="Elegant modern elevator interior"
+          loading="lazy"
+        />
 
-      <img
-        src="/images/elevater10.png"
-        alt="Architectural interior details"
-        loading="lazy"
-      />
+        <img
+          src="/images/elevater13.png"
+          alt="Premium contemporary elevator interior"
+          loading="lazy"
+        />
+
+        <img
+          src="/images/elevater10.png"
+          alt="Modern architectural interior"
+          loading="lazy"
+        />
+
+        <img
+          src="/images/elevater11.png"
+          alt="Contemporary elevator design"
+          loading="lazy"
+        />
+
+        <img
+          src="/images/elevater1.webp"
+          alt="Luxury architectural interior"
+          loading="lazy"
+        />
+      </div>
+
+      <!-- DUPLICATE SET FOR SEAMLESS LOOP -->
+      <div class="gallery-track-group" aria-hidden="true">
+        <img
+          src="/images/elevater6.webp"
+          alt=""
+          loading="lazy"
+        />
+
+        <img
+          src="/images/elevater13.png"
+          alt=""
+          loading="lazy"
+        />
+
+        <img
+          src="/images/elevater10.png"
+          alt=""
+          loading="lazy"
+        />
+
+        <img
+          src="/images/elevater11.png"
+          alt=""
+          loading="lazy"
+        />
+
+        <img
+          src="/images/elevater1.webp"
+          alt=""
+          loading="lazy"
+        />
+      </div>
+
     </div>
+  </div>
 
+  <div class="container">
     <p class="disclaimer">
       Illustrative architectural imagery. Actual Trauzan project photographs
       can be added here.
@@ -371,7 +427,10 @@ const faqs = [
   </div>
 </section>
 
+
 <!-- TESTIMONIALS - LIGHT PREMIUM DESIGN -->
+
+<!-- TESTIMONIALS - INFINITE LEFT TO RIGHT -->
 <section class="testimonials-section reveal">
   <div class="container">
 
@@ -390,87 +449,179 @@ const faqs = [
       </p>
     </div>
 
-    <div class="testimonial-grid">
+  </div>
 
-      <article class="testimonial-card">
-        <div class="testimonial-card-top">
-          <span class="testimonial-index">01 / OUR PROMISE</span>
-          <span class="testimonial-symbol">“</span>
-        </div>
+  <div class="testimonial-marquee">
+    <div class="testimonial-track">
 
-        <h3>
-          Your safety is never
-          <em>an afterthought.</em>
-        </h3>
+      <!-- FIRST SET -->
+      <div class="testimonial-track-group">
 
-        <p>
-          From installation planning to ongoing maintenance, we approach
-          every requirement with attention to safety, quality and detail.
-        </p>
-
-        <div class="testimonial-card-bottom">
-          <span class="commitment-icon">01</span>
-          <div>
-            <strong>Safety First</strong>
-            <small>At every level</small>
+        <article class="testimonial-card">
+          <div class="testimonial-card-top">
+            <span class="testimonial-index">01 / OUR PROMISE</span>
+            <span class="testimonial-symbol">“</span>
           </div>
-        </div>
-      </article>
 
-      <article class="testimonial-card testimonial-card-featured">
-        <div class="testimonial-card-top">
-          <span class="testimonial-index">02 / OUR APPROACH</span>
-          <span class="testimonial-symbol">“</span>
-        </div>
+          <h3>
+            Your safety is never
+            <em>an afterthought.</em>
+          </h3>
 
-        <h3>
-          Every solution starts
-          <em>with understanding.</em>
-        </h3>
+          <p>
+            From installation planning to ongoing maintenance, we approach
+            every requirement with attention to safety, quality and detail.
+          </p>
 
-        <p>
-          We take the time to understand your building, your expectations
-          and your specific requirements before recommending a suitable
-          elevator solution.
-        </p>
-
-        <div class="testimonial-card-bottom">
-          <span class="commitment-icon">02</span>
-          <div>
-            <strong>Thoughtful Solutions</strong>
-            <small>Made around your needs</small>
+          <div class="testimonial-card-bottom">
+            <span class="commitment-icon">01</span>
+            <div>
+              <strong>Safety First</strong>
+              <small>At every level</small>
+            </div>
           </div>
-        </div>
-      </article>
+        </article>
 
-      <article class="testimonial-card">
-        <div class="testimonial-card-top">
-          <span class="testimonial-index">03 / OUR COMMITMENT</span>
-          <span class="testimonial-symbol">“</span>
-        </div>
-
-        <h3>
-          Good service goes
-          <em>beyond installation.</em>
-        </h3>
-
-        <p>
-          Our commitment continues through maintenance, repair and
-          assistance, helping you take care of your elevator system
-          over time.
-        </p>
-
-        <div class="testimonial-card-bottom">
-          <span class="commitment-icon">03</span>
-          <div>
-            <strong>Continued Support</strong>
-            <small>Here when you need us</small>
+        <article class="testimonial-card testimonial-card-featured">
+          <div class="testimonial-card-top">
+            <span class="testimonial-index">02 / OUR APPROACH</span>
+            <span class="testimonial-symbol">“</span>
           </div>
-        </div>
-      </article>
+
+          <h3>
+            Every solution starts
+            <em>with understanding.</em>
+          </h3>
+
+          <p>
+            We take the time to understand your building, your expectations
+            and your specific requirements before recommending a suitable
+            elevator solution.
+          </p>
+
+          <div class="testimonial-card-bottom">
+            <span class="commitment-icon">02</span>
+            <div>
+              <strong>Thoughtful Solutions</strong>
+              <small>Made around your needs</small>
+            </div>
+          </div>
+        </article>
+
+        <article class="testimonial-card">
+          <div class="testimonial-card-top">
+            <span class="testimonial-index">03 / OUR COMMITMENT</span>
+            <span class="testimonial-symbol">“</span>
+          </div>
+
+          <h3>
+            Good service goes
+            <em>beyond installation.</em>
+          </h3>
+
+          <p>
+            Our commitment continues through maintenance, repair and
+            assistance, helping you take care of your elevator system
+            over time.
+          </p>
+
+          <div class="testimonial-card-bottom">
+            <span class="commitment-icon">03</span>
+            <div>
+              <strong>Continued Support</strong>
+              <small>Here when you need us</small>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- DUPLICATE SET FOR SEAMLESS LOOP -->
+      <div class="testimonial-track-group" aria-hidden="true">
+
+        <article class="testimonial-card">
+          <div class="testimonial-card-top">
+            <span class="testimonial-index">01 / OUR PROMISE</span>
+            <span class="testimonial-symbol">“</span>
+          </div>
+
+          <h3>
+            Your safety is never
+            <em>an afterthought.</em>
+          </h3>
+
+          <p>
+            From installation planning to ongoing maintenance, we approach
+            every requirement with attention to safety, quality and detail.
+          </p>
+
+          <div class="testimonial-card-bottom">
+            <span class="commitment-icon">01</span>
+            <div>
+              <strong>Safety First</strong>
+              <small>At every level</small>
+            </div>
+          </div>
+        </article>
+
+        <article class="testimonial-card testimonial-card-featured">
+          <div class="testimonial-card-top">
+            <span class="testimonial-index">02 / OUR APPROACH</span>
+            <span class="testimonial-symbol">“</span>
+          </div>
+
+          <h3>
+            Every solution starts
+            <em>with understanding.</em>
+          </h3>
+
+          <p>
+            We take the time to understand your building, your expectations
+            and your specific requirements before recommending a suitable
+            elevator solution.
+          </p>
+
+          <div class="testimonial-card-bottom">
+            <span class="commitment-icon">02</span>
+            <div>
+              <strong>Thoughtful Solutions</strong>
+              <small>Made around your needs</small>
+            </div>
+          </div>
+        </article>
+
+        <article class="testimonial-card">
+          <div class="testimonial-card-top">
+            <span class="testimonial-index">03 / OUR COMMITMENT</span>
+            <span class="testimonial-symbol">“</span>
+          </div>
+
+          <h3>
+            Good service goes
+            <em>beyond installation.</em>
+          </h3>
+
+          <p>
+            Our commitment continues through maintenance, repair and
+            assistance, helping you take care of your elevator system
+            over time.
+          </p>
+
+          <div class="testimonial-card-bottom">
+            <span class="commitment-icon">03</span>
+            <div>
+              <strong>Continued Support</strong>
+              <small>Here when you need us</small>
+            </div>
+          </div>
+        </article>
+
+      </div>
 
     </div>
+  </div>
 
+  <div class="container">
     <div class="testimonial-closing">
       <div>
         <span class="closing-label">THE TRAUZAN STANDARD</span>
@@ -481,9 +632,136 @@ const faqs = [
         Let's work together <span>↗</span>
       </a>
     </div>
+  </div>
+</section>
+
+
+<!-- PREMIUM HOME CONTACT -->
+<section class="home-contact">
+  <div class="container">
+
+    <div class="home-contact-heading">
+      <div>
+        <span class="eyebrow">LET'S BUILD SOMETHING BETTER</span>
+        <h2>
+          Every great journey<br />
+          <em>starts with a conversation.</em>
+        </h2>
+      </div>
+      <span class="home-contact-number">01 — CONTACT</span>
+    </div>
+
+    <div class="home-contact-layout">
+
+      <!-- LEFT CONTENT -->
+      <div class="home-contact-left">
+
+        <p class="home-contact-intro">
+          Looking for the right elevator solution? Whether it's a new
+          installation, modernization or ongoing maintenance, our team
+          is ready to understand your requirements.
+        </p>
+
+        <div class="home-contact-services">
+          <a href="/contact/" class="contact-service">
+            <span class="service-number">01</span>
+            <span>New Installation</span>
+            <span class="service-arrow">↗</span>
+          </a>
+
+          <a href="/contact/" class="contact-service">
+            <span class="service-number">02</span>
+            <span>Repair & Maintenance</span>
+            <span class="service-arrow">↗</span>
+          </a>
+
+          <a href="/contact/" class="contact-service">
+            <span class="service-number">03</span>
+            <span>Modernization</span>
+            <span class="service-arrow">↗</span>
+          </a>
+
+          <a href="/contact/" class="contact-service">
+            <span class="service-number">04</span>
+            <span>Passenger & Goods Lifts</span>
+            <span class="service-arrow">↗</span>
+          </a>
+        </div>
+
+        <a href="/contact/" class="home-contact-button">
+          <span>DISCUSS YOUR REQUIREMENTS</span>
+          <span class="contact-button-arrow">↗</span>
+        </a>
+
+      </div>
+
+      <!-- RIGHT IMAGE -->
+      <div class="home-contact-right">
+
+        <div class="contact-image">
+          <img
+            src="/images/elevater8.png"
+            alt="Trauzan Elevator installation"
+            loading="lazy"
+          />
+
+          <div class="contact-image-shade"></div>
+
+          <div class="contact-image-top">
+            <span>TRAUZAN ELEVATOR</span>
+            <span>EST. EXCELLENCE</span>
+          </div>
+
+          <div class="contact-image-caption">
+            <span>ENGINEERED AROUND YOU</span>
+            <h3>Moving<br /><em>forward.</em></h3>
+          </div>
+        </div>
+
+        <!-- OVERLAPPING INFO CARD -->
+        <div class="contact-info-card">
+          <div class="contact-info-card-top">
+            <span>HAVE A PROJECT IN MIND?</span>
+            <span class="contact-info-star">✳</span>
+          </div>
+
+          <a href="tel:+919911806270" class="contact-info-phone">
+            +91 9911806270
+            <span>↗</span>
+          </a>
+
+          <div class="contact-info-card-bottom">
+            <span>Speak directly with our team</span>
+            <a href="https://wa.me/919911806270" target="_blank" rel="noopener">
+              WHATSAPP US ↗
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- BOTTOM CONTACT BAR -->
+    <div class="home-contact-footer">
+      <div class="contact-footer-brand">
+        <span class="footer-gold-dot"></span>
+        READY WHEN YOU ARE.
+      </div>
+
+      <a href="mailto:Trauzanelevator@gmail.com">
+        Trauzanelevator@gmail.com
+      </a>
+
+      <a href="/contact/" class="contact-footer-link">
+        VISIT CONTACT PAGE <span>↗</span>
+      </a>
+    </div>
 
   </div>
 </section>
+
+
+
 
 <!-- FAQ -->
 <section class="section faq-section reveal">
@@ -1270,34 +1548,111 @@ const faqs = [
   }
 
   /* GALLERY */
-  .gallery-preview {
-    background: #f8f6f1;
+ 
+/* =====================================
+   INFINITE GALLERY MARQUEE
+===================================== */
+
+.gallery-preview {
+  background: #f8f6f1;
+  overflow: hidden;
+}
+
+.gallery-preview .section-heading {
+  padding: 0;
+}
+
+.gallery-loop {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.gallery-track {
+  display: flex;
+  width: max-content;
+  animation: galleryMarquee 32s linear infinite;
+  will-change: transform;
+}
+
+.gallery-track-group {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding-right: 18px;
+  flex-shrink: 0;
+}
+
+.gallery-track-group img {
+  display: block;
+  width: clamp(270px, 31vw, 390px);
+  height: 340px;
+  flex-shrink: 0;
+  object-fit: cover;
+  transition: filter .5s ease, transform .5s ease;
+}
+
+.gallery-track-group img:hover {
+  filter: brightness(.82);
+  transform: scale(.98);
+}
+
+.gallery-loop:hover .gallery-track {
+  animation-play-state: paused;
+}
+
+@keyframes galleryMarquee {
+  from {
+    transform: translateX(0);
   }
 
-  .preview-grid {
-    display: grid;
-    grid-template-columns: 1.2fr 1fr 1fr;
-    gap: 18px;
-    height: 340px;
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.disclaimer {
+  font-size: 11px;
+  color: #969087;
+  margin-top: 20px;
+}
+
+/* GALLERY MOBILE */
+
+@media(max-width: 750px) {
+  .gallery-track-group {
+    gap: 12px;
+    padding-right: 12px;
   }
 
-  .preview-grid img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform .7s ease, filter .5s ease;
+  .gallery-track-group img {
+    width: 72vw;
+    height: 245px;
   }
 
-  .preview-grid img:hover {
-    transform: scale(1.025);
-    filter: brightness(.9);
+  .gallery-track {
+    animation-duration: 25s;
+  }
+}
+
+@media(max-width: 480px) {
+  .gallery-track-group img {
+    width: 78vw;
+    height: 220px;
   }
 
-  .disclaimer {
-    font-size: 11px;
-    color: #969087;
-    margin-top: 20px;
+  .gallery-track {
+    animation-duration: 22s;
   }
+}
+
+/* REDUCED MOTION */
+@media(prefers-reduced-motion: reduce) {
+  .gallery-track {
+    animation: none;
+  }
+}
+
 
   /* =====================================
      TESTIMONIALS - PREMIUM LIGHT THEME
@@ -1519,6 +1874,88 @@ const faqs = [
     gap: 32px;
     color: #735a32;
   }
+
+
+
+/* TESTIMONIAL INFINITE MARQUEE */
+
+.testimonial-marquee {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.testimonial-track {
+  display: flex;
+  width: max-content;
+  animation: testimonialMove 35s linear infinite;
+  will-change: transform;
+}
+
+.testimonial-track-group {
+  display: flex;
+  align-items: stretch;
+  gap: 22px;
+  padding-right: 22px;
+  flex-shrink: 0;
+}
+
+.testimonial-track .testimonial-card {
+  width: 370px;
+  min-height: 355px;
+  flex-shrink: 0;
+}
+
+.testimonial-marquee:hover .testimonial-track {
+  animation-play-state: paused;
+}
+
+@keyframes testimonialMove {
+  from {
+    transform: translateX(-50%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* TABLET */
+@media(max-width: 1000px) {
+  .testimonial-track .testimonial-card {
+    width: 340px;
+  }
+}
+
+/* MOBILE */
+@media(max-width: 750px) {
+  .testimonial-track {
+    animation-duration: 28s;
+  }
+
+  .testimonial-track-group {
+    gap: 15px;
+    padding-right: 15px;
+  }
+
+  .testimonial-track .testimonial-card {
+    width: 290px;
+    min-height: 330px;
+    padding: 27px 24px;
+  }
+}
+
+@media(max-width: 480px) {
+  .testimonial-track {
+    animation-duration: 24s;
+  }
+
+  .testimonial-track .testimonial-card {
+    width: 275px;
+    min-height: 310px;
+  }
+}
+
 
   /* FAQ */
   .faq-section {
