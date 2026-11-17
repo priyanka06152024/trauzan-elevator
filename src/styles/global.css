@@ -3117,6 +3117,7 @@ body > header.site-header {
 }
 
 
+
 /* ==========================================
    FOOTER BRAND
 ========================================== */
@@ -3150,27 +3151,9 @@ body > header.site-header {
   transform: translateX(4px);
 }
 
-.footer-bottom-link {
-  color: var(--gold2);
-  transition: color 0.3s ease;
-}
-
-.footer-bottom-link:hover {
-  color: white;
-}
-
-.footer-bottom-link span {
-  display: inline-block;
-  transition: transform 0.3s ease;
-}
-
-.footer-bottom-link:hover span {
-  transform: translate(3px, -3px);
-}
-
 
 /* ==========================================
-   PREMIUM SOCIAL MEDIA BAR
+   SOCIAL MEDIA BAR
 ========================================== */
 
 .footer-social-bar {
@@ -3178,7 +3161,6 @@ body > header.site-header {
   align-items: center;
   justify-content: space-between;
   gap: 30px;
-
   padding: 30px 0;
   margin-top: 40px;
 
@@ -3215,7 +3197,6 @@ body > header.site-header {
   display: inline-flex;
   align-items: center;
   gap: 9px;
-
   padding: 10px 13px;
 
   border: 1px solid rgba(255,255,255,0.16);
@@ -3223,8 +3204,8 @@ body > header.site-header {
 
   color: white;
   text-decoration: none;
-
   font-size: 12px;
+
   transition:
     background 0.3s ease,
     color 0.3s ease,
@@ -3235,7 +3216,6 @@ body > header.site-header {
 .footer-social-symbol {
   width: 25px;
   height: 25px;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3276,11 +3256,22 @@ body > header.site-header {
    FOOTER BOTTOM
 ========================================== */
 
-.footer-bottom {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 15px;
+.footer-bottom-link {
+  color: var(--gold2);
+  transition: color 0.3s ease;
+}
+
+.footer-bottom-link:hover {
+  color: white;
+}
+
+.footer-bottom-link span {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.footer-bottom-link:hover span {
+  transform: translate(3px, -3px);
 }
 
 
@@ -3357,7 +3348,7 @@ body > header.site-header {
 
 
 /* ==========================================
-   ACCESSIBILITY
+   REDUCED MOTION
 ========================================== */
 
 @media (prefers-reduced-motion: reduce) {
@@ -3370,5 +3361,3 @@ body > header.site-header {
   }
 
 }
-
-
